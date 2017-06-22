@@ -93,15 +93,19 @@ that still provides same commands from the teletype editor.
 
 ### SEdit
 
-SEdit is officially documented in the "Interlisp-D Reference Manual" for version
-"Lyric", and all subsequent versions, including [Medley].  No online versions exist.
+from the 1987 Xerox Lisp Release Notes:
 
-SEdit is briefly described as the "List Structure Editor" on Page 7-3 of [An
-Introduction to Medley].
+> SEdit is the new Xerox Lisp structure editor. It allows you to edit
+> Xerox Lisp code directly in memory.  This editor replaces DEdit in
+> Chapter 16, Structure Editor, of the Interlisp-D Reference Manual.
+> First introduced in Lyric, the SEdit structure editor has been greatly
+> enhanced in the Medley release.
 
+[![sedit-screen]][sedit-video]
 
-
-Thoughts on SEdit
+- For full documentation, see Appendix B of [Lyric Release Notes] for initial
+  version or [Medley Release Notes] for expanded version.
+- musings on SEdit
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 
@@ -146,6 +150,11 @@ In the 1984 [LISP/VM User's Guide]
 [Evolution of Lisp]:https://www.csee.umbc.edu//courses/331/resources/papers/Evolution-of-Lisp.pdf
 [Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
 [History of Interlisp discussion]:https://groups.google.com/forum/#!topic/comp.sys.xerox/FKG8f1cnWvI
+
+[sedit-screen]:https://user-images.githubusercontent.com/116838/27450864-b4ffcf20-5752-11e7-90e4-1668709d0189.png
+[sedit-video]:https://www.youtube.com/watch?v=2qsmF8HHskg
+[Lyric Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198706_Lyric/198706_3102434_Lyric_Release_Notes.pdf
+[Medley Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198809_Medley_1.0/400006_Lisp_Release_Notes_Medley_Release_1.0_Sep88.pdf
 
 [An Introduction to to Medley]:https://archive.org/details/bitsavers_xeroxinter0AnIntroductiontoMedleyRelease2.0Feb92_9578080
 [Medley]:http://top2bottom.net/medley.html

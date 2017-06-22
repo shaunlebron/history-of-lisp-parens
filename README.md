@@ -10,12 +10,15 @@ I started by working backwards from today:
 - 2014 - [Lispy]
 - 2012 - [Smartparens]
 - 2005 - [Paredit] by [Taylor Campbell]
+- 2001 - [DrScheme], now [DrRacket]
 - ...?
 
 [Parinfer]:http://shaunlebron.github.io/parinfer/
 [Lispy]:https://github.com/abo-abo/lispy
 [Smartparens]:https://github.com/Fuco1/smartparens
 [Paredit]:https://www.emacswiki.org/emacs/ParEdit
+[DrScheme]:http://www.ccs.neu.edu/racket/pubs/jfp01-fcffksf.pdf
+[DrRacket]:https://docs.racket-lang.org/drracket/editor.html
 [Taylor Campbell]:http://mumble.net/~campbell/
 
 Going back further is more difficult, but I found this quote in [Paredit

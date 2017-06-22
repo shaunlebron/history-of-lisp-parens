@@ -141,6 +141,10 @@ text vs structure when storing and displaying their code:
 - a much later followup discussing how structured editing died: https://groups.google.com/forum/#!msg/comp.lang.lisp/D2Q5t8IEOkg/AqbNfOxZgUIJ
   - Maclisp killed it because they wanted custom layout of code and comments
 
+This is so far my favorite summary of this topic from 1997.  (too many great
+points to list).
+https://groups.google.com/d/msg/comp.lang.lisp/dldLx8Yj7q8/u4y2zq19XIYJ
+
 ## Contemporary discussions on structured editing
 
 - Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/

@@ -12,11 +12,12 @@ I started by working backwards from today (still filling in blanks):
 - 2005 - [Paredit] by [Taylor Campbell]
 - 2001 - [DrScheme], now [DrRacket]
 - ...
-- 1987 - Interlisp SEdit (based on its previous DEdit and its unnamed teletype editor)
+- 1987 - Interlisp SEdit (structure editor. full interactive display)
+- 198? - Interlisp DEdit (display editor. clickable display + command window)
+- 1980 - Zmacs - first structure commands for text editor
 - ...
-- [1980](https://news.ycombinator.com/item?id=10548242) - Zmacs by Scott Burson and David Chapman
-- ...
-- 1966 - [PILOT] (first thesis on structured editing)
+- 1970 - BBN (InterLisp) - ("on-line" structure editor. REPL-based editor)
+- 1966 - [PILOT] - first thesis on structure editing
 
 ### Researching methods
 
@@ -112,6 +113,13 @@ from the 1987 Xerox Lisp Release Notes:
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 
+## ZMacs
+
+ZMacs in 1980 is [reported](https://news.ycombinator.com/item?id=10548242) to be
+the first text editor with balanced parentheses commands. The 1987 [ZMacs
+Editor Reference] shows them on page 209 (3-137):
+
+
 ## LISP/VM
 
 > I must say that I wish I could use LISP/VM again, and Martin's editor. I've
@@ -175,3 +183,4 @@ https://groups.google.com/d/msg/comp.lang.lisp/dldLx8Yj7q8/u4y2zq19XIYJ
 [Medley]:http://top2bottom.net/medley.html
 
 [LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
+[ZMacs Editor Reference]:http://bitsavers.trailing-edge.com/pdf/ti/explorer/2243192-0001A_Zmacs_Jun87.pdf

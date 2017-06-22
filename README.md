@@ -4,7 +4,7 @@ I'd like to find out how people tolerated parens back in the golden days of
 Lisp. I have a feeling we might've forgotten some things that would be useful
 today, or might influence some new ideas.
 
-I started by working backwards from today:
+I started by working backwards from today (still filling in blanks):
 
 - 2015 - [Parinfer]
 - 2014 - [Lispy]
@@ -30,6 +30,7 @@ Researching old methods is difficult, but I've been tracing from this quote in
 - finding mailing list discussions
 - looking for official reference manuals of lisp machines
 - using [deepdyve] to find articles
+- asking around
 
 General:
   - [Evolution of Lisp] seems to provide a good map.
@@ -105,6 +106,8 @@ from the 1987 Xerox Lisp Release Notes:
 
 - For full documentation, see Appendix B of [Lyric Release Notes] for initial
   version or [Medley Release Notes] for expanded version.
+- extra resources for possibly running it:
+  - https://www.reddit.com/r/lisp/comments/6iq2u8/how_was_lisp_edited_in_the_80s_and_90s/dj8n6yw/
 - musings on SEdit
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
@@ -122,18 +125,26 @@ In the 1984 [LISP/VM User's Guide]
 
 ...
 
-
-
-
 ## Maclisp
 
 (preferred formatted ASCII files over data structures for programs)
 
-## Misc Notes
+## Debating Maclisp vs Interlisp (i.e. storing code as text vs structure)
+
+A discussion/debate from 1978 that reveals a lot about how people thought about
+text vs structure when storing and displaying their code:
+
+[Programming in an Interactive Environment: the Lisp Experience](https://www.researchgate.net/publication/220566511_Programming_in_an_Interactive_Environment_the_LISP_Experience)
+
+- response by Richard Stallman arguing for text: https://www.deepdyve.com/lp/association-for-computing-machinery/surveyor-s-forum-structured-editing-with-a-lisp-PzoXAz9GCu?impressionId=594bfe8baf9dc&i_medium=mydeepdyve&i_campaign=recommendations&i_source=recommendations
+- author's reply: https://www.deepdyve.com/lp/association-for-computing-machinery/surveyor-s-forum-structured-editing-with-a-lisp-mQNqMU2je0?impressionId=594c0f05171ea&i_medium=docview&i_campaign=recommendations&i_source=recommendations
+- a much later followup discussing how structured editing died: https://groups.google.com/forum/#!msg/comp.lang.lisp/D2Q5t8IEOkg/AqbNfOxZgUIJ
+  - Maclisp killed it because they wanted custom layout of code and comments
+
+## Contemporary discussions on structured editing
 
 - Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/
-- Why Interlisp's structure editor disappeared: https://groups.google.com/forum/#!msg/comp.lang.lisp/D2Q5t8IEOkg/AqbNfOxZgUIJ
-  - Maclisp killed it because they wanted custom layout of code and comments?
+- Frame-based editing: https://news.ycombinator.com/item?id=14609215
 
 [Parinfer]:http://shaunlebron.github.io/parinfer/
 [Lispy]:https://github.com/abo-abo/lispy

@@ -11,40 +11,50 @@ I started by working backwards from today:
 - 2012 - [Smartparens]
 - 2005 - [Paredit] by [Taylor Campbell]
 - 2001 - [DrScheme], now [DrRacket]
-- ...?
+- ...
+- 1987 - Interlisp SEdit (based on its previous DEdit and its unnamed teletype editor)
+- ...
+- [1980](https://news.ycombinator.com/item?id=10548242) - Zmacs by Scott Burson and David Chapman
+- ...
+- 1966 - [PILOT] (first thesis on structured editing)
 
-[Parinfer]:http://shaunlebron.github.io/parinfer/
-[Lispy]:https://github.com/abo-abo/lispy
-[Smartparens]:https://github.com/Fuco1/smartparens
-[Paredit]:https://www.emacswiki.org/emacs/ParEdit
-[DrScheme]:http://www.ccs.neu.edu/racket/pubs/jfp01-fcffksf.pdf
-[DrRacket]:https://docs.racket-lang.org/drracket/editor.html
-[Taylor Campbell]:http://mumble.net/~campbell/
+### Researching methods
 
-Going back further is more difficult, but I found this quote in [Paredit
-credits]:
+Researching old methods is difficult, but I've been tracing from this quote in
+[Paredit credits], (but I could not locate `sedit.el`):
 
 > The original inspirations for paredit were Interlisp-D's structure
 > editor 'SEdit' -- a real structure editor, not a cheesy imitation like
 > paredit -- and Guillaume Germain's sedit.el for GNU Emacs.
 
-[Paredit credits]:http://mumble.net/~campbell/emacs/paredit.credits
+- finding mailing list discussions
+- looking for official reference manuals of lisp machines
+- using [deepdyve] to find articles
 
-I could not locate `sedit.el`, but I started reading about Interlisp to find out
-more.
+General:
+  - [Evolution of Lisp] seems to provide a good map.
+  - http://www.softwarepreservation.org/projects/LISP/
 
 ## Interlisp
 
-From the 1983 [Interlisp Reference Manual]
+> reimplemented by [LispEdit]
 
-[Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
+### Stored as data, not text
+
+> In Interlisp, the programmer worked with source code presented by a structure
+> editor, which operated on source code in the form of memory-resident Lisp data
+> structures.
+
+from [Evolution of Lisp]
 
 ### Teletype Editor
 
+From the 1983 [Interlisp Reference Manual],
 Chapter 17 describes "The Teletype Editor", a command-driven way to navigate and
 modify S-expressions.  This is interesting because:
 
 - only shows one expression at a time on a single line
+  - (line-based editing as opposed to screen-based editing)
 - nested sub-expressions collapsed by default to `&`
 - expand with `?`
 - pretty-print with `pp`
@@ -83,11 +93,15 @@ that still provides same commands from the teletype editor.
 
 ### SEdit
 
-SEdit is hailed as a great Lisp editor, but I can find no documentation for it.
-The latest Interlisp manual I can find is from 1985, and it made no mention of
-it, so it probably came out sometime after.
+SEdit is officially documented in the "Interlisp-D Reference Manual" for version
+"Lyric", and all subsequent versions, including [Medley].  No online versions exist.
 
-- Thoughts on SEdit
+SEdit is briefly described as the "List Structure Editor" on Page 7-3 of [An
+Introduction to Medley].
+
+
+
+Thoughts on SEdit
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 
@@ -100,18 +114,40 @@ it, so it probably came out sometime after.
 
 In the 1984 [LISP/VM User's Guide]
 
-[LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
+- misc note: https://groups.google.com/forum/#!topic/comp.lang.lisp/1q2qwkfFzKg
 
 ...
+
+
 
 
 ## Maclisp
 
-...
+(preferred formatted ASCII files over data structures for programs)
 
 ## Misc Notes
 
 - Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/
 - Why Interlisp's structure editor disappeared: https://groups.google.com/forum/#!msg/comp.lang.lisp/D2Q5t8IEOkg/AqbNfOxZgUIJ
   - Maclisp killed it because they wanted custom layout of code and comments?
-- Different Lisp systems: http://www.softwarepreservation.org/projects/LISP/
+
+[Parinfer]:http://shaunlebron.github.io/parinfer/
+[Lispy]:https://github.com/abo-abo/lispy
+[Smartparens]:https://github.com/Fuco1/smartparens
+[Paredit]:https://www.emacswiki.org/emacs/ParEdit
+[Paredit credits]:http://mumble.net/~campbell/emacs/paredit.credits
+[DrScheme]:http://www.ccs.neu.edu/racket/pubs/jfp01-fcffksf.pdf
+[DrRacket]:https://docs.racket-lang.org/drracket/editor.html
+[Taylor Campbell]:http://mumble.net/~campbell/
+[PILOT]:https://dspace.mit.edu/bitstream/handle/1721.1/6905/AITR-221.pdf
+
+[LispEdit]:https://github.com/blakemcbride/LispEdit/blob/master/EDIT.txt
+[deepdyve]:https://www.deepdyve.com
+[Evolution of Lisp]:https://www.csee.umbc.edu//courses/331/resources/papers/Evolution-of-Lisp.pdf
+[Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
+[History of Interlisp discussion]:https://groups.google.com/forum/#!topic/comp.sys.xerox/FKG8f1cnWvI
+
+[An Introduction to to Medley]:https://archive.org/details/bitsavers_xeroxinter0AnIntroductiontoMedleyRelease2.0Feb92_9578080
+[Medley]:http://top2bottom.net/medley.html
+
+[LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf

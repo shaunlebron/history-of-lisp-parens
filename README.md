@@ -32,25 +32,83 @@ more.
 
 ## Interlisp
 
-In the 1983 [Interlisp Reference Manual], Chapter 17 describes "The Teletype Editor"
-which is a command line way to navigate and modify S-expressions.  This is interesting
-because it is
+From the 1983 [Interlisp Reference Manual]
+
+[Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
+
+### Teletype Editor
+
+Chapter 17 describes "The Teletype Editor", a command-driven way to navigate and
+modify S-expressions.  This is interesting because:
+
+- only shows one expression at a time on a single line
+- nested sub-expressions collapsed by default to `&`
+- expand with `?`
+- pretty-print with `pp`
+
+Since there is explicitly __one expression in focus at a time__, I believe this
+allowed the following __paren inference__ via inserting a Right or Left paren:
+
+> We could use a command which effectively inserts and/or removes left and right
+> parentheses.
+>
+> There are six of these commands:
+> - BI ("Both In"), BO ("Both Out")
+> - LI ("Left In"), LO ("Left Out"
+> - RI ("Right In"), RO ("Right Out")
+>
+> ...LI, LO, RI, and RO actually do not insert or remove just one parenthesis.
+> but this is very suggestive of what actually happens.
+
+An interesting way of describing parens:
+
+> Of course, we will always have the same number of left parentheses as right
+> parentheses, because the parentheses are just a notational guide to structure
+> that is provided by our print program.
+
+Touting "always balanced" here.
+
+> Herein lies one of the principal advantages of a LISP oriented editor over a
+> text editor: unbalanced parentheses errors are not possible.
+
+### DEdit
 
 Chapter 20.1 covers "DEdit", a more visual way to navigate and modify S-expressions
 that still provides same commands from the teletype editor.
 
-Most interesting so far:
+...
 
-[Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
+### SEdit
+
+SEdit is hailed as a great Lisp editor, but I can find no documentation for it.
+The latest Interlisp manual I can find is from 1985, and it made no mention of
+it, so it probably came out sometime after.
+
+- Thoughts on SEdit
+  - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
+  - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
+
+## LISP/VM
+
+> I must say that I wish I could use LISP/VM again, and Martin's editor. I've
+> always felt it gave me the best interface, with the highest productivity, of any
+> editor I've ever used for LISP.
+> (source: https://groups.google.com/d/msg/comp.lang.lisp/D2Q5t8IEOkg/EjgB3XBP8hQJ)
+
+In the 1984 [LISP/VM User's Guide]
+
+[LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
+
+...
 
 
-> We could use a command which effectively inserts and/or removes left and right
-> parentheses. There are six of these commands: 8 I ("Both In"), 80 ("Both Out"),
-> LI ("Left In"), LO ("Left Out"), RI ("Right In"), and RO ("Right Out"). Of
-> course, we will always have the same number of left parentheses as right
-> parentheses. because the parentheses are just a notational guide to structure
-> that is provided by our print program. Herein lies one of the principal
-> advantages of a LISP oriented editor over a text editor: unbalanced parentheses
-> errors are not possible. Thus. LI. LO, RI, and RO actually do not insert or
-> remove just one parenthesis. but this is very suggestive of what actually
-> happens.
+## Maclisp
+
+...
+
+## Misc Notes
+
+- Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/
+- Why Interlisp's structure editor disappeared: https://groups.google.com/forum/#!msg/comp.lang.lisp/D2Q5t8IEOkg/AqbNfOxZgUIJ
+  - Maclisp killed it because they wanted custom layout of code and comments?
+- Different Lisp systems: http://www.softwarepreservation.org/projects/LISP/

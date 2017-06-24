@@ -103,15 +103,29 @@ _See the 1983 [Interlisp Reference Manual], Chapter 17.
 
 ### DEdit
 
-The display editor was a visual extension to the Teletype Editor. It had three
-views:
+The display editor added a visual `Select > Command > Execute > Print` alternative to the teletype editor:
+
+1. __pretty-print window__ (left), allowed click to select expressions (current=solid-lined, previous=dash-lined)
+1. __command menu__ (right), allowed click to perform an operation on selections (current=arg1, previous=arg2)
+1. __type-in window__ (below), allowed manual typing of expressions. on enter, it becomes selected and clickable
 
 ![dedit-screen]
 
-- A pretty-printed window, allowing click to select.
-- A button window, allowing click to perform an operation on selection(s).
-- A type-in window, allowing same teletype commands as before, except clickable
-  as the pretty-printed window.
+Clicking an expression while holding <kbd>Shift</kbd>
+_unreads_ it into the type-in window (pastes as text).
+
+- __left click__ - select object
+- __middle click__ - select containing list
+- __right click__ - select lowest common ancestor with previous selection
+
+| DEdit Paren Command | Initially Hidden?             | Teletype Command |
+|---------------------|-------------------------------|------------------|
+| `()`                |                               | same as `BI`     |
+| `( in`              | middle-click `()` to show     | same as `LI`     |
+| `) in`              | middle-click `()` to show     | same as `RI`     |
+| `() out`            |                               | same as `BO`     |
+| `( out`             | middle-click `() out` to show | same as `LO`     |
+| `) out`             | middle-click `() out` to show | same as `RO`     |
 
 _See the 1985 [Interlisp-D Reference Manual Volume II: Environment], Chapter 16
 page 407._
@@ -178,10 +192,12 @@ https://groups.google.com/d/msg/comp.lang.lisp/dldLx8Yj7q8/u4y2zq19XIYJ
 
 ## Appendix
 
-### Contemporary discussions on structured editing
+### Non-Lisp discussions on structure editing
 
 - Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/
 - Frame-based editing: https://news.ycombinator.com/item?id=14609215
+- Intentional Programming: https://www.youtube.com/watch?v=tSnnfUj1XCQ
+  - similar to Interlisp (i.e. structure-based)
 
 ### Researching methods
 

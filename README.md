@@ -121,7 +121,7 @@ _unreads_ it into the type-in window (pastes as text).
 - __right click__ - select lowest common ancestor with previous selection
 
 | DEdit Paren Command | Initially Hidden?             | Teletype Command |
-|---------------------|-------------------------------|------------------|
+|:--------------------|:------------------------------|:-----------------|
 | `()`                |                               | same as `BI`     |
 | `( in`              | middle-click `()` to show     | same as `LI`     |
 | `) in`              | middle-click `()` to show     | same as `RI`     |
@@ -134,7 +134,7 @@ page 407._
 
 ### SEdit
 
-from the 1987 Xerox Lisp Release Notes:
+from the 1987 Xerox Lisp [Medley Release Notes]:
 
 > SEdit is the new Xerox Lisp structure editor. It allows you to edit
 > Xerox Lisp code directly in memory.  This editor replaces DEdit in
@@ -144,8 +144,41 @@ from the 1987 Xerox Lisp Release Notes:
 
 [![sedit-screen]][sedit-video]
 
-- For full documentation, see Appendix B of [Lyric Release Notes] for initial
-  version or [Medley Release Notes] for expanded version.
+Two types of carets (cursors):
+
+- `⌃` edit caret (set with left-click)
+- `▲` structure caret (set with middle-click)
+
+```
+(LEQ n 1)     ; 1. left-click "Q"
+   ─⌃
+
+(LEQ n 1)     ; 2. middle-click "Q"
+ ───▲
+
+(LEQ n 1)     ; 3. middle-click "Q" again
+─────────▲
+```
+
+```
+(LEQ n 1)     ; 1. left-click "E"
+  ─⌃
+  ┌──┐
+(L│EQ│ n 1)   ; 2. right-click "Q"
+  └──┘
+```
+
+```
+(LEQ n 1)     ; 1. middle-click "E"
+ ───▲
+ ┌───────┐
+(│LEQ n 1│)   ; 2. right-click "1"
+ └───────┘
+```
+
+
+- See Appendix B of [Lyric Release Notes] for initial version or [Medley
+  Release Notes] for expanded version.
 - extra resources for possibly running it:
   - https://www.reddit.com/r/lisp/comments/6iq2u8/how_was_lisp_edited_in_the_80s_and_90s/dj8n6yw/
 - musings on SEdit

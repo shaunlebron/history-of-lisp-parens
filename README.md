@@ -51,40 +51,76 @@ from [Evolution of Lisp]
 
 ### Teletype Editor
 
-From the 1983 [Interlisp Reference Manual],
-Chapter 17 describes "The Teletype Editor", a command-driven way to navigate and
-modify S-expressions.  This is interesting because:
+> From the 1983 [Interlisp Reference Manual], Chapter 17.
+> "Commands That Move Parentheses" on page 465.
 
-- only shows one expression at a time on a single line
-  - (line-based editing as opposed to screen-based editing)
+Rather than displaying the whole file, only one expression is displayed at a
+time.  It is printed after each command:
+
+- use `N` to go Nth child of current expression
+- use `0` to go up to parent
 - nested sub-expressions collapsed by default to `&`
 - expand with `?`
 - pretty-print with `pp`
 
-Since there is explicitly __one expression in focus at a time__, I believe this
-allowed the following __paren inference__ via inserting a Right or Left paren:
+Six paren commands can be performed on the current expression's children:
 
-> We could use a command which effectively inserts and/or removes left and right
-> parentheses.
->
-> There are six of these commands:
-> - BI ("Both In"), BO ("Both Out")
-> - LI ("Left In"), LO ("Left Out"
-> - RI ("Right In"), RO ("Right Out")
->
-> ...LI, LO, RI, and RO actually do not insert or remove just one parenthesis.
-> but this is very suggestive of what actually happens.
+| Command | Name      | Mnemonic | Extra Inference                     |
+|:--------|:----------|:---------|:------------------------------------|
+| `BI`    | Both In   | `()+`    |                                     |
+| `BO`    | Both Out  | `()-`    |                                     |
+| `LI`    | Left In   | `(+`     | adds `)` at end                     |
+| `LO`    | Left Out  | `(-`     | removes `)` and EVERYTHING AFTER IT |
+| `RI`    | Right In  | `)<`     |                                     |
+| `RO`    | Right Out | `)>`     |                                     |
 
-An interesting way of describing parens:
+```
+(A B C D E F G H)
 
-> Of course, we will always have the same number of left parentheses as right
-> parentheses, because the parentheses are just a notational guide to structure
-> that is provided by our print program.
+>(BI 3)
+(A B (C) D E F G H)
+     ^ ^ wrap parens around index 3
+```
 
-Touting "always balanced" here.
+```
+(A B C D E F G H)
 
-> Herein lies one of the principal advantages of a LISP oriented editor over a
-> text editor: unbalanced parentheses errors are not possible.
+>(BI 3 5)
+(A B (C D E) F G H)
+     ^     ^ wrap parens from index 3 to index 5
+
+>(BO 3)
+(A B _C D E_ F G H)
+     ^     ^ unwrap parens around index 3
+```
+
+```
+(A B C D E F G H)
+
+>(LI 3)
+(A B (C D E F G H))
+     ^           ^ insert left-paren before index 3, and right-paren at end
+```
+
+```
+(A B (C D E) F G H)
+
+>(LO 3)
+(A B _C D E_ _ _ _)
+     ^     ^ ^ ^ ^ remove parens around index 3, and EVERYTHING AFTER IT
+```
+
+```
+(A B (C D E F G H))
+
+>(RI 3 2)
+(A B (C D) E F G H_)
+         ^ <----- ^ move right-paren of index 3 to inner index 2
+
+>(RO 3)
+(A B (C D_ E F G H))
+         ^ -----> ^ move right-paren of index 3 to end
+```
 
 ### DEdit
 

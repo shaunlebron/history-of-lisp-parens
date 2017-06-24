@@ -103,11 +103,13 @@ _See the 1983 [Interlisp Reference Manual], Chapter 17.
 
 ### DEdit
 
-The display editor added a visual `Select > Command > Execute > Print` alternative to the teletype editor:
+The display editor was a visual alternative to the teletype editor—click one or
+two expressions in the pretty-print, then click a command to execute on those
+expressions.
 
-1. __pretty-print window__ (left), allowed click to select expressions (current=solid-lined, previous=dash-lined)
-1. __command menu__ (right), allowed click to perform an operation on selections (current=arg1, previous=arg2)
-1. __type-in window__ (below), allowed manual typing of expressions. on enter, it becomes selected and clickable
+1. __pretty-print window__ (left) - click to select expressions (current=solid-lined, previous=dash-lined)
+1. __command menu__ (right) - click to perform an operation on selections (current=arg1, previous=arg2)
+1. __type-in window__ (below) - manually type an expression. when done, it becomes selected and clickable
 
 ![dedit-screen]
 

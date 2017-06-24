@@ -19,43 +19,18 @@ I started by working backwards from today (still filling in blanks):
 - 1970 - BBN (InterLisp) - ("on-line" structure editor. REPL-based editor)
 - 1966 - [PILOT] - first thesis on structure editing
 
-### Researching methods
-
-Researching old methods is difficult, but I've been tracing from this quote in
-[Paredit credits], (but I could not locate `sedit.el`):
-
-> The original inspirations for paredit were Interlisp-D's structure
-> editor 'SEdit' -- a real structure editor, not a cheesy imitation like
-> paredit -- and Guillaume Germain's sedit.el for GNU Emacs.
-
-- finding mailing list discussions
-- looking for official reference manuals of lisp machines
-- using [deepdyve] to find articles
-- asking around
-
-General:
-  - [Evolution of Lisp] seems to provide a good map.
-  - http://www.softwarepreservation.org/projects/LISP/
-
 ## Interlisp
-
-> reimplemented by [LispEdit]
-
-### Stored as data, not text
 
 > In Interlisp, the programmer worked with source code presented by a structure
 > editor, which operated on source code in the form of memory-resident Lisp data
-> structures.
+> structures.<br>—[Evolution of Lisp]
 
-from [Evolution of Lisp]
 
 ### Teletype Editor
 
-> From the 1983 [Interlisp Reference Manual], Chapter 17.
-> "Commands That Move Parentheses" on page 465.
-
-Rather than displaying the whole file, only one expression is displayed at a
-time.  It is printed after each command:
+A command-line interface for editing s-expressions. Rather than displaying the
+whole file, only one expression is displayed at a time—by printing after each
+command.
 
 - use `N` to go Nth child of current expression
 - use `0` to go up to parent
@@ -122,12 +97,24 @@ Six paren commands can be performed on the current expression's children:
          ^ -----> ^ move right-paren of index 3 to end
 ```
 
+_See the 1983 [Interlisp Reference Manual], Chapter 17.
+"Commands That Move Parentheses" on page 465._
+
+
 ### DEdit
 
-Chapter 20.1 covers "DEdit", a more visual way to navigate and modify S-expressions
-that still provides same commands from the teletype editor.
+The display editor was a visual extension to the Teletype Editor. It had three
+views:
 
-...
+![dedit-screen]
+
+- A pretty-printed window, allowing click to select.
+- A button window, allowing click to perform an operation on selection(s).
+- A type-in window, allowing same teletype commands as before, except clickable
+  as the pretty-printed window.
+
+_See the 1985 [Interlisp-D Reference Manual Volume II: Environment], Chapter 16
+page 407._
 
 ### SEdit
 
@@ -189,10 +176,30 @@ This is so far my favorite summary of this topic from 1997.  (too many great
 points to list).
 https://groups.google.com/d/msg/comp.lang.lisp/dldLx8Yj7q8/u4y2zq19XIYJ
 
-## Contemporary discussions on structured editing
+## Appendix
+
+### Contemporary discussions on structured editing
 
 - Prune: https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013/
 - Frame-based editing: https://news.ycombinator.com/item?id=14609215
+
+### Researching methods
+
+started from [Paredit credits], (could not locate `sedit.el`):
+
+> The original inspirations for paredit were Interlisp-D's structure
+> editor 'SEdit' -- a real structure editor, not a cheesy imitation like
+> paredit -- and Guillaume Germain's sedit.el for GNU Emacs.
+
+- finding mailing list discussions
+- looking for official reference manuals of lisp machines
+- using [deepdyve] to find articles
+- asking around
+
+General:
+  - [Evolution of Lisp] seems to provide a good map.
+  - http://www.softwarepreservation.org/projects/LISP/
+
 
 [Parinfer]:http://shaunlebron.github.io/parinfer/
 [Lispy]:https://github.com/abo-abo/lispy
@@ -209,7 +216,9 @@ https://groups.google.com/d/msg/comp.lang.lisp/dldLx8Yj7q8/u4y2zq19XIYJ
 [Evolution of Lisp]:https://www.csee.umbc.edu//courses/331/resources/papers/Evolution-of-Lisp.pdf
 [Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
 [History of Interlisp discussion]:https://groups.google.com/forum/#!topic/comp.sys.xerox/FKG8f1cnWvI
+[Interlisp-D Reference Manual Volume II: Environment]:http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/xerox/interlisp-d/198510_Koto/3101273_Interlisp-D_Vol_2_Environment_Oct85.pdf
 
+[dedit-screen]:https://user-images.githubusercontent.com/116838/27507672-6a6416ae-5899-11e7-9475-5704bb8933c4.png
 [sedit-screen]:https://user-images.githubusercontent.com/116838/27450864-b4ffcf20-5752-11e7-90e4-1668709d0189.png
 [sedit-video]:https://www.youtube.com/watch?v=2qsmF8HHskg
 [Lyric Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198706_Lyric/198706_3102434_Lyric_Release_Notes.pdf

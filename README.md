@@ -220,10 +220,10 @@ __Right-clicking__ creates a granular selection.  Subsequent typing replaces sel
 
 | Paren Operation  | Description                                                     |
 |:-----------------|:----------------------------------------------------------------|
-| Insert `(`       | inserts `()` with `▲` inside                                    |
-| Delete `(`       | removes list if empty, else no-op                               |
-| Insert `)`       | nothing inserted. places `▲` after next `)`. selects whole list |
-| Delete `)`       | nothing deleted. places `▲` before `)`                          |
+| Type `(`         | inserts `()` with `▲` inside                                    |
+| Type `)`         | nothing inserted. places `▲` after next `)`. selects whole list |
+| Backspace at `(` | removes list if empty, else no-op                               |
+| Backspace at `)` | nothing deleted. places `▲` before `)`                          |
 | Middle-click `(` | selects list. places `▲` before `(`                             |
 | Middle-click `)` | selects list. places `▲` after `)`                              |
 | Meta-`(`         | wraps selection in a list. places `▲` after `(`                 |

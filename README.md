@@ -179,14 +179,19 @@ Two types of carets (cursors):
  └───────┘
 ```
 
-- gaps
-- broken atoms
-- special characters
+| SEdit Operation | Description                                         | Equivalent Teletype Command |
+|:----------------|:----------------------------------------------------|:----------------------------|
+| Insert `(`      | inserts matching `)` at end of list                 | `LI`                        |
+| Delete `(`      | removes list if empty, else no-op                   |                             |
+| Insert `)`      | nothing inserted, moves cursor after list           |                             |
+| Delete `)`      | nothing deleted, moves cursor inside list           |                             |
+| Meta-`(`        | wrap selection in a list, position cursor after `(` | `BI`                        |
+| Meta-`)`        | wrap selection in a list, position cursor after `)` | `BI`                        |
+|                 | (how to remove paren?)                              | `BO`                        |
 
-Notes:
+_See Appendix B of [Lyric Release Notes] or [Medley Release Notes]_
 
-- See Appendix B of [Lyric Release Notes] or [Medley Release Notes]
-- musings on SEdit
+musings on SEdit
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 

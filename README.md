@@ -179,15 +179,15 @@ Two types of carets (cursors):
  └───────┘
 ```
 
-| SEdit Operation | Description                                         | Equivalent Teletype Command |
-|:----------------|:----------------------------------------------------|:----------------------------|
-| Insert `(`      | inserts matching `)` at end of list                 | `LI`                        |
-| Delete `(`      | removes list if empty, else no-op                   |                             |
-| Insert `)`      | nothing inserted, moves cursor after list           |                             |
-| Delete `)`      | nothing deleted, moves cursor inside list           |                             |
-| Meta-`(`        | wrap selection in a list, position cursor after `(` | `BI`                        |
-| Meta-`)`        | wrap selection in a list, position cursor after `)` | `BI`                        |
-|                 | (how to remove paren?)                              | `BO`                        |
+| SEdit Operation         | Description                                                  | Teletype Command |
+|:------------------------|:-------------------------------------------------------------|:-----------------|
+| Insert `(`              | inserts `()` and places cursor inside                        |                  |
+| Delete `(`              | removes list if empty, else no-op                            |                  |
+| Insert `)`              | nothing inserted. moves cursor after `)`. selects whole list |                  |
+| Delete `)`              | nothing deleted. moves cursor inside list                    |                  |
+| Meta-`(` (parenthesize) | wrap selection in a list, position cursor after `(`          | same as `BI`     |
+| Meta-`)` (parenthesize) | wrap selection in a list, position cursor after `)`          | same as `BI`     |
+| Meta-`/` (extract)      | unwrap selected list                                         | same as `BO`     |
 
 _See Appendix B of [Lyric Release Notes] or [Medley Release Notes]_
 

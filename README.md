@@ -16,7 +16,7 @@ I started by working backwards from today (still filling in blanks):
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
 - 1980 - Zmacs - first structure commands for text editor
 - ...
-- 1970 - BBN (InterLisp) - ("on-line" structure editor. REPL-based editor)
+- 1967 - BBN (InterLisp) - (teletype structure editor.)
 - 1966 - [PILOT] - first thesis on structure editing
 
 ## Interlisp
@@ -99,8 +99,7 @@ Six paren commands can be performed on the current expression's children:
          ^ -----> ^ move right-paren of index 3 to end
 ```
 
-_See the 1983 [Interlisp Reference Manual], Chapter 17.
-"Commands That Move Parentheses" on page 465._
+_See the 1967 [BBN Lisp System] section on "structure changing commands" page 49._
 
 
 ### DEdit
@@ -271,6 +270,7 @@ General:
 [LispEdit]:https://github.com/blakemcbride/LispEdit/blob/master/EDIT.txt
 [deepdyve]:https://www.deepdyve.com
 [Evolution of Lisp]:https://www.csee.umbc.edu//courses/331/resources/papers/Evolution-of-Lisp.pdf
+[BBN Lisp System]:http://www.dtic.mil/dtic/tr/fulltext/u2/656771.pdf
 [Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
 [History of Interlisp discussion]:https://groups.google.com/forum/#!topic/comp.sys.xerox/FKG8f1cnWvI
 [Interlisp-D Reference Manual Volume II: Environment]:http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/xerox/interlisp-d/198510_Koto/3101273_Interlisp-D_Vol_2_Environment_Oct85.pdf

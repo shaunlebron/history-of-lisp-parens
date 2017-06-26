@@ -28,6 +28,8 @@ I started by working backwards from today (still filling in blanks):
 
 ### Teletype Editor
 
+__[Try it here!](running.md#interlisp-teletype)__
+
 A command-line interface for editing s-expressions. Rather than displaying the
 whole file, only one expression is displayed at a time—by printing after each
 command.
@@ -134,6 +136,8 @@ page 407._
 
 ### SEdit
 
+__[Try it here!](running.md#interlisp-sedit)__
+
 from the 1987 Xerox Lisp [Medley Release Notes]:
 
 > SEdit is the new Xerox Lisp structure editor. It allows you to edit
@@ -176,11 +180,13 @@ Two types of carets (cursors):
  └───────┘
 ```
 
+- gaps
+- broken atoms
+- special characters
 
-- See Appendix B of [Lyric Release Notes] for initial version or [Medley
-  Release Notes] for expanded version.
-- extra resources for possibly running it:
-  - https://www.reddit.com/r/lisp/comments/6iq2u8/how_was_lisp_edited_in_the_80s_and_90s/dj8n6yw/
+Notes:
+
+- See Appendix B of [Lyric Release Notes] or [Medley Release Notes]
 - musings on SEdit
   - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
   - http://legacy.python.org/search/hypermail/python-1994q3/0138.html

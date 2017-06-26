@@ -147,76 +147,10 @@ from the 1987 Xerox Lisp [Medley Release Notes]:
 
 [![sedit-screen]][sedit-video]
 
-Two types of carets (cursors):
+See [SEdit Caret and Selection details] to learn how to edit. Parentheses
+behavior below:
 
-- `⌃` edit caret (shown when _inside_ an atom)
-- `▲` structure caret (shown when _between_ atoms)
-
-__Left-clicking__ an atom selects an individual character, and positions the
-edit caret to its left or right:
-
-```
-(LEQ n 1)     ; left-click "Q" on its right side
-   ─⌃
-
-(LEQ n 1)     ; left-click "Q" on its left side
-  ⌃─
-```
-
-Typing at `⌃` will insert text inside the atom.
-
-```
-(LEQ n 1)     ; 1. left-click "Q" on its right side
-   ─⌃
-
-(LEQX n 1)    ; 2. type "X"
-     ⌃
-```
-
-__Middle-clicking__ an atom selects it, and positions the structure caret to its
-left or right:
-
-```
-(LEQ n 1)     ; middle-click "Q" on its right side
- ───▲
-
-(LEQ n 1)     ; middle-click "Q" on its left side
-▲───
-```
-
-Typing at `▲` creates a new atom, and changes cursor to `⌃`:
-
-```
-(LEQ n 1)     ; 1. middle-click "Q" on its right side
- ───▲
-
-(LEQ X n 1)   ; 2. type "X"
-      ⌃
-```
-
-__Right-clicking__ creates a granular selection.  Subsequent typing replaces selection:
-
-```
-(LEQ n 1)     ; 1. left-click "E"
-  ─⌃
-  ┌──┐
-(L│EQ│ n 1)   ; 2. right-click "Q"
-  └──┘
-
-(LX n 1)      ; 3. type "X"
-   ⌃
-```
-
-```
-(LEQ n 1)     ; 1. middle-click "E"
- ───▲
- ┌─────┐
-(│LEQ n│ 1)   ; 2. right-click "n"
- └─────┘
-
-(X 1)         ; 3. type "X"
-  ⌃
-```
+[SEdit Caret and Selection details]:sedit-caret-selection.md
 
 | Paren Operation  | Description                                                     |
 |:-----------------|:----------------------------------------------------------------|
@@ -224,13 +158,11 @@ __Right-clicking__ creates a granular selection.  Subsequent typing replaces sel
 | Type `)`         | nothing inserted. places `▲` after next `)`. selects whole list |
 | Backspace at `(` | removes list if empty, else no-op                               |
 | Backspace at `)` | nothing deleted. places `▲` before `)`                          |
-| Middle-click `(` | selects list. places `▲` before `(`                             |
-| Middle-click `)` | selects list. places `▲` after `)`                              |
+| Middle-click `(` | selects list. places `▲` on clicked side of `(`                 |
+| Middle-click `)` | selects list. places `▲` on clicked side of `)`                 |
 | Meta-`(`         | wraps selection in a list. places `▲` after `(`                 |
 | Meta-`)`         | wraps selection in a list. places `▲` after `)`                 |
-| Meta-`/`         | unwraps selected list (works with quotes and others)            |
-
-TODO: talk about <kbd>Shift</kbd> for copy/pasting
+| Meta-`/`         | unwraps selected list, string, or quote                         |
 
 _See Appendix B of [Lyric Release Notes] or [Medley Release Notes]_
 

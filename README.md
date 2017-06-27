@@ -193,6 +193,42 @@ Editor Reference] shows them on page 209 (3-137):
 > order to condense large expressions to the confines of a finite screen.
 > —[Interactive program execution in Lispedit]
 
+There are no surviving images of what Lispedit looked like.  But reconstructing
+from descriptions:
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│TOP DISPLAY AREA: pretty-printed and condensed code           │
+│                  ("focus" expression highlighted)            │
+│                                                              │
+│ (LAMBDA                                                      │
+│   (INPUT)                                                    │
+│   (PROG (WORDLIST)                                           │
+│     (DO ((I 0 (+ (FINDENDWORD INPUT I) 1))) ...)             │
+│     (SETQ WORDLIST (REVERSE WORDLIST))                       │
+│     (NMAPCAR                                                 │
+│       (LAMBDA                                                │
+│         (WORD)                                               │
+│         (COND                                                │
+│           (((ONE-OF a e i o u) (ELT WORD 0)) &)              │
+│           ('ELSE                                             │
+│             (CONCAT                                          │
+│               (SUBSTRING WORD 1 (- (SIZE WORD) 1))           │
+│               (SUBSTRING WORD 0 1)                           │
+│               "ay "))))                                      │
+│       WORDLIST) ...)                                         │
+│                                                              │
+├──────────────────────────────────────────────────────────────┤
+│FENCE LINE: (recursion-level / input-state / current-object)  │
+├──────────────────────────────────────────────────────────────┤
+│MESSAGE AREA: (command messages echoed here)                  │
+├──────────────────────────────────────────────────────────────┤
+│Program Function Keys: (currently defined keys)               │
+├──────────────────────────────────────────────────────────────┤
+│Command Area: _                                               │
+└──────────────────────────────────────────────────────────────┘
+```
+
 _See the 1984 [LISP/VM User's Guide] and [Experience with an Uncommon Lisp]._
 
 ## Maclisp

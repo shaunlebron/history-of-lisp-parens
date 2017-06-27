@@ -183,9 +183,7 @@ Editor Reference] shows them on page 209 (3-137):
 > I must say that I wish I could use LISP/VM again, and Martin's editor. I've
 > always felt it gave me the best interface, with the highest productivity, of any
 > editor I've ever used for LISP.
-> (source: https://groups.google.com/d/msg/comp.lang.lisp/D2Q5t8IEOkg/EjgB3XBP8hQJ)
-
-Described in the 1984 [LISP/VM User's Guide] and in [Experience with an Uncommon Lisp].
+> —[Cyril N. Alberga](https://groups.google.com/d/msg/comp.lang.lisp/D2Q5t8IEOkg/EjgB3XBP8hQJ)
 
 > An important feature of Lispedit is a program display that shows the structure
 > of a Lisp expression from the point of view of a selected sub-expression.  The
@@ -193,9 +191,9 @@ Described in the 1984 [LISP/VM User's Guide] and in [Experience with an Uncommon
 > to the surrounding context is shown by automatically generated indentation.
 > Selected components of the focus and its context are elided (shown as '...') in
 > order to condense large expressions to the confines of a finite screen.
-> —from [Interactive program execution in Lispedit]
+> —[Interactive program execution in Lispedit]
 
-- misc note: https://groups.google.com/forum/#!topic/comp.lang.lisp/1q2qwkfFzKg
+_See the 1984 [LISP/VM User's Guide] and [Experience with an Uncommon Lisp]._
 
 ## Maclisp
 

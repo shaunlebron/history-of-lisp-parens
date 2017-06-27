@@ -14,6 +14,7 @@ I started by working backwards from today (still filling in blanks):
 - ...
 - 1987 - Interlisp SEdit (structure editor. full interactive display)
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
+- 1980 - IBM Lisp/VM Lispedit (display editor)
 - 1980 - Zmacs - first structure commands for text editor
 - ...
 - 1967 - BBN (InterLisp) - (teletype structure editor.)
@@ -177,18 +178,24 @@ the first text editor with balanced parentheses commands. The 1987 [ZMacs
 Editor Reference] shows them on page 209 (3-137):
 
 
-## LISP/VM
+## Lispedit
 
 > I must say that I wish I could use LISP/VM again, and Martin's editor. I've
 > always felt it gave me the best interface, with the highest productivity, of any
 > editor I've ever used for LISP.
 > (source: https://groups.google.com/d/msg/comp.lang.lisp/D2Q5t8IEOkg/EjgB3XBP8hQJ)
 
-In the 1984 [LISP/VM User's Guide]
+Described in the 1984 [LISP/VM User's Guide] and in [Experience with an Uncommon Lisp].
+
+> An important feature of Lispedit is a program display that shows the structure
+> of a Lisp expression from the point of view of a selected sub-expression.  The
+> sub-expression, called the _focus_, is shown high-lighted and its relationship
+> to the surrounding context is shown by automatically generated indentation.
+> Selected components of the focus and its context are elided (shown as '...') in
+> order to condense large expressions to the confines of a finite screen.
+> —from [Interactive program execution in Lispedit]
 
 - misc note: https://groups.google.com/forum/#!topic/comp.lang.lisp/1q2qwkfFzKg
-
-...
 
 ## Maclisp
 
@@ -266,3 +273,6 @@ General:
 
 [LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
 [ZMacs Editor Reference]:http://bitsavers.trailing-edge.com/pdf/ti/explorer/2243192-0001A_Zmacs_Jun87.pdf
+
+[Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
+[Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG

@@ -196,38 +196,38 @@ Editor Reference] shows them on page 209 (3-137):
 There are no surviving images of what Lispedit looked like.  But reconstructing
 from descriptions:
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│TOP DISPLAY AREA: pretty-printed and condensed code           │
-│                  ("focus" expression highlighted)            │
-│                                                              │
-│ (LAMBDA                                                      │
-│   (INPUT)                                                    │
-│   (PROG (WORDLIST)                                           │
-│     (DO ((I 0 (+ (FINDENDWORD INPUT I) 1))) ...)             │
-│     (SETQ WORDLIST (REVERSE WORDLIST))                       │
-│     (NMAPCAR                                                 │
-│       (LAMBDA                                                │
-│         (WORD)                                               │
-│         (COND                                                │
-│           (((ONE-OF a e i o u) (ELT WORD 0)) &)              │
-│           ('ELSE                                             │
-│             (CONCAT                                          │
-│               (SUBSTRING WORD 1 (- (SIZE WORD) 1))           │
-│               (SUBSTRING WORD 0 1)                           │
-│               "ay "))))                                      │
-│       WORDLIST) ...)                                         │
-│                                                              │
-├──────────────────────────────────────────────────────────────┤
-│FENCE LINE: (recursion-level / input-state / current-object)  │
-├──────────────────────────────────────────────────────────────┤
-│MESSAGE AREA: (command messages echoed here)                  │
-├──────────────────────────────────────────────────────────────┤
-│Program Function Keys: (currently defined keys)               │
-├──────────────────────────────────────────────────────────────┤
-│Command Area: _                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+<pre>
+┌────────────────────────────────────────────────────────────────┐
+│TOP DISPLAY AREA: pretty-printed and condensed code             │
+│                  ("focus" expression highlighted)              │
+│                                                                │
+│  1  (LAMBDA                                                    │
+│  2    (INPUT)                                                  │
+│  3    (PROG (WORDLIST)                                         │
+│  4      (DO ((I 0 (+ (FINDENDWORD INPUT I) 1))) ...)           │
+│  5      (SETQ WORDLIST (REVERSE WORDLIST))                     │
+│  6      <strong>(NMAPCAR                                               </strong>│
+│  7      <strong>  (LAMBDA                                              </strong>│
+│  8      <strong>    (WORD)                                             </strong>│
+│  9      <strong>    (COND                                              </strong>│
+│ 10      <strong>      (((ONE-OF a e i o u) (ELT WORD 0)) &)            </strong>│
+│ 11      <strong>      ('ELSE                                           </strong>│
+│ 12      <strong>        (CONCAT                                        </strong>│
+│ 13      <strong>          (SUBSTRING WORD 1 (- (SIZE WORD) 1))         </strong>│
+│ 14      <strong>          (SUBSTRING WORD 0 1)                         </strong>│
+│ 15      <strong>          "ay "))))                                    </strong>│
+│ 16      <strong>  WORDLIST)</strong> ...)                                       │
+│                                                                │
+├────────────────────────────────────────────────────────────────┤
+│FENCE LINE: (recursion-level / input-state / current-object)    │
+├────────────────────────────────────────────────────────────────┤
+│MESSAGE AREA: (command messages echoed here)                    │
+├────────────────────────────────────────────────────────────────┤
+│Program Function Keys: (currently defined keys)                 │
+├────────────────────────────────────────────────────────────────┤
+│Command Area: _                                                 │
+└────────────────────────────────────────────────────────────────┘
+</pre>
 
 _See the 1984 [LISP/VM User's Guide] and [Experience with an Uncommon Lisp]._
 

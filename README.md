@@ -17,12 +17,16 @@ I started by working backwards from today (still filling in blanks):
 - ...
 - 1987 - Interlisp SEdit (structure editor. full interactive display)
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
+- 1983 - BBC LISP FEDIT (structure editor, based closely on PSL fedit)
 - 1980 - IBM Lisp/VM Lispedit (display editor)
 - 1980 - Zmacs - first structure commands for text editor
+- 1980 - Portable Standard Lisp fedit/sedit (structure editor)
 - 1979 - Nokolisp - screen-based editor
 - ...
 - 1967 - BBN (InterLisp) - (teletype structure editor)
+- 196? - Standard Lisp fedit (structure editor)*
 - 1966 - [PILOT] - first thesis on structure editing
+
 
 ## Interlisp
 
@@ -30,6 +34,18 @@ I started by working backwards from today (still filling in blanks):
 > editor, which operated on source code in the form of memory-resident Lisp data
 > structures.<br>—[Evolution of Lisp]
 
+
+## Standard Lisp/Portable Standard Lisp
+
+Portable Standard Lisp, as used at Cambridge University in England and later
+commercialised by Acornsoft, had a structure editor, entered as **sedit** for
+editing arbitrary s-expressions or as **fedit** for editing functions. Whether
+this feature existed in Portable Standard Lisp as used at Utah and other sites
+is not known, but is probable, since it is understood that the Cambridge version
+was a straight port. Similarly, it is not known whether this feature existed
+in Standard Lisp prior to the 1980 release of Portable Standard Lisp, but again
+it is probable, since the new feature in Portable Standard Lisp was the
+Lisp-to-C compiler.
 
 ### Teletype Editor
 

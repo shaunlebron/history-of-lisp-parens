@@ -312,12 +312,12 @@ line, we can select and focus it to see our next view:
 | `4`     | navigate out to parent list (exit if top) |
 | `p`     | toggle pretty-print                       |
 
-| Paren Command | Description                    |
-|:--------------|:-------------------------------|
-| `a`           | wrap                           |
-| `r`           | unwrap                         |
-| `w`           | join with next line, then wrap |
-| `c`           | extend parens to next line     |
+| Paren Command | Description       | Example            |
+|:--------------|:------------------|:-------------------|
+| `a`           | add parens        | `a` => `(a)`       |
+| `r`           | remove parens     | `(a)` => `a`       |
+| `w`           | wrap with next    | `a b` => `(a b)`   |
+| `c`           | conjoin with next | `(a) b` => `(a b)` |
 
 See all the [nokolisp commands](nokolisp-commands.md).
 

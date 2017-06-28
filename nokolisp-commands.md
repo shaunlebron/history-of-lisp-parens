@@ -16,12 +16,12 @@
 | `v`            | swap this and next                   |
 | `q`            | wrap line in `(quote ...)`           |
 
-| Paren Command | Description                    |
-|:--------------|:-------------------------------|
-| `a`           | wrap                           |
-| `r`           | unwrap                         |
-| `w`           | join with next line, then wrap |
-| `c`           | extend parens to next line     |
+| Paren Command | Description       | Example            |
+|:--------------|:------------------|:-------------------|
+| `a`           | add parens        | `a` => `(a)`       |
+| `r`           | remove parens     | `(a)` => `a`       |
+| `w`           | wrap with next    | `a b` => `(a b)`   |
+| `c`           | conjoin with next | `(a) b` => `(a b)` |
 
 | Display Command | Description         |
 |:----------------|:--------------------|

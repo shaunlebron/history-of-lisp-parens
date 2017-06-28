@@ -1,6 +1,8 @@
 # Portable Standard Lisp fedit documentation
 
-*NOTE*: This was scanned an optical-character-recognitioned on 20170628 from pages 11 to 16 of the **Cambridge Lisp Reference Manual** published by Acorn Computers Ltd in 1985; ISBN 0 907876 42 0. This edition refers to the National Semiconductor 32000 port of Acorn Cambridge Lisp, but the later ARM port had the same features. I do not know for certain that Portable Standard Lisp on other platforms had **fedit**/**sedit**, but I believe that they did because my understanding is that Cambridge Lisp was a fairly straight port of Portable Standard Lisp to the Acorn Cambridge Workstation (National Semiconductor 32016) and Archimedes (ARM) architectures. Similarly, as my understanding is that Portable Standard Lisp is just Standard Lisp with a Lisp-to-C compiler, I believe that **fedit**/**sedit** were inherited from Standard Lisp.
+*NOTE*: This was scanned and optical-character-recognitioned on 20170628 from pages 11 to 16 of the **Cambridge Lisp Reference Manual** published by Acorn Computers Ltd in 1985; ISBN 0 907876 42 0.
+
+This edition refers to the National Semiconductor 32000 port of Acorn Cambridge Lisp, but the later ARM port had the same features. I do not know for certain that Portable Standard Lisp on other platforms had **fedit**/**sedit**, but I believe that they did because my understanding is that Cambridge Lisp was a fairly straight port of Portable Standard Lisp to the Acorn Cambridge Workstation (National Semiconductor 32016) and Archimedes (ARM) architectures. Similarly, as my understanding is that Portable Standard Lisp is just Standard Lisp with a Lisp-to-C compiler, I believe that **fedit**/**sedit** were inherited from Standard Lisp.
 
 
 ## 2.2 The LISP Editor
@@ -15,13 +17,13 @@ The editor sets up a template for the function, and the user fills in its defini
 
 ### 2.2.2 General background
 
-The editor commands are designed around the concept of the 'current s-expression!, which is visible on the screen at all times, the first character of which is highlighted by an inverse-video block (the 'edit pointer-). The current s-expression can be any one of the following:
+The editor commands are designed around the concept of the 'current s-expression', which is visible on the screen at all times, the first character of which is highlighted by an inverse-video block (the 'edit pointer'). The current s-expression can be any one of the following:
 
 1. an atom;
 2. a LISP list starting with an opening parenthesis.
 3. The cdr (tail) of a LISP list: in this case the inverse-video block is over the blank immediately before the car (head) of the current s-expression.
 
-Initially, on entry to the editor, the current s-expression is the whole of the structure being edited, and the screen will resemble figure I.
+Initially, on entry to the editor, the current s-expression is the whole of the structure being edited, and the screen will resemble figure 1.
 
     h[ead] t[ail] u[p] b[egin] l[oo]k-f[or] ma[rk]-mo[ve] z[oom]i[n]-z[oom]o[ut]
     d[elete] r[eplace] s[plice] i[nsert] [u]n[do] c[hange] [e]x[plode] #[hash]
@@ -35,10 +37,13 @@ Initially, on entry to the editor, the current s-expression is the whole of the 
                         (car a)
                         (append & b) ) ) )
 
-*Figure I The Lisp Editor The three lines at the top of the screen form a menu containing the more important (mostly single character) editor commands; then the structure being edited is displayed (in this case a function definition). The ampersands (&) indicate detail that has had to be suppressed for the structure to fit on the vdu screen.*
+*Figure 1 The Lisp Editor The three lines at the top of the screen form a menu containing the more important (mostly single character) editor commands; then the structure being edited is displayed (in this case a function definition). The ampersands (&) indicate detail that has had to be suppressed for the structure to fit on the vdu screen.*
 
-2.2.3 Editor commands
-Elementary moving When the arrow keys are pressed, the edit pointer does not move from character to character like a cursor in a text editor (e.g. the Panos editor), but jumps from one s-expression to the next. The best way to familiarise yourself with the edit pointer's style of movement is to experiment. In addition to using the arrow keys, there are several commands to move the edit pointer around, and thus make other parts of the structure the current s-expression. They are:
+### 2.2.3 Editor commands
+
+#### Elementary moving
+
+When the arrow keys are pressed, the edit pointer does not move from character to character like a cursor in a text editor (e.g. the Panos editor), but jumps from one s-expression to the next. The best way to familiarise yourself with the edit pointer's style of movement is to experiment. In addition to using the arrow keys, there are several commands to move the edit pointer around, and thus make other parts of the structure the current s-expression. They are:
 
 * h - Move to the head of the current s-expression.
 * t - Move to its tail.
@@ -93,7 +98,13 @@ For convenience, in 'cut and paste' operations, the editor sets up the variable 
 
 #### Miscellaneous features
 
-The editor stores the name of the last function it edited in the global variable **\*\*edit-last-function**, and if the function editor is called without being given the name of a function, it re-edits the last one. The menu of editor commands displayed at the top of the screen can be changed by altering the contents of the global variable **\*\*edit-menu**. The variable must contain a list of strings, each not longer than the width of the screen, each string to go on one line. The position on the screen of the structure being edited is automatically adjusted depending on how much space the menu takes up. Since there is the facility to enter a supervisor loop within the editor, it is possible (and sometimes very useful) to enter the editor within that loop and thus edit at a second (or even higher) level. To help the user keep track of which level he is in, and the name of the function he is editing at each level, the editor maintains this information in the variable **\*\*edit-Level**. The editor maintains a list of all the functions that have been edited in the current LISP session in the global variable **\*\*edit-functions**. Thus it is easy to keep track of which functions have been changed and so need to he written hack out to disc at the end of a session.
+The editor stores the name of the last function it edited in the global variable **\*\*edit-last-function**, and if the function editor is called without being given the name of a function, it re-edits the last one.
+
+The menu of editor commands displayed at the top of the screen can be changed by altering the contents of the global variable **\*\*edit-menu**. The variable must contain a list of strings, each not longer than the width of the screen, each string to go on one line. The position on the screen of the structure being edited is automatically adjusted depending on how much space the menu takes up.
+
+Since there is the facility to enter a supervisor loop within the editor, it is possible (and sometimes very useful) to enter the editor within that loop and thus edit at a second (or even higher) level. To help the user keep track of which level he is in, and the name of the function he is editing at each level, the editor maintains this information in the variable **\*\*edit-Level**.
+
+The editor maintains a list of all the functions that have been edited in the current LISP session in the global variable **\*\*edit-functions**. Thus it is easy to keep track of which functions have been changed and so need to he written hack out to disc at the end of a session.
 
 #### 2.2.5 limitations
 

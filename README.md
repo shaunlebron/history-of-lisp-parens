@@ -9,6 +9,7 @@ today, or might influence some new ideas.
 I started by working backwards from today (still filling in blanks):
 
 - 2015 - [Parinfer]
+- 2014 - [Paxedit]
 - 2014 - [Lispy]
 - 2012 - [Smartparens]
 - 2005 - [Paredit] by [Taylor Campbell]
@@ -401,3 +402,4 @@ General:
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
 [Nokolisp]:https://timonoko.github.io/Nokolisp.htm
+[Paxedit]:https://github.com/promethial/paxedit

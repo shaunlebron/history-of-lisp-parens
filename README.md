@@ -16,8 +16,9 @@ I started by working backwards from today (still filling in blanks):
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
 - 1980 - IBM Lisp/VM Lispedit (display editor)
 - 1980 - Zmacs - first structure commands for text editor
+- 1979 - Nokolisp - screen-based editor
 - ...
-- 1967 - BBN (InterLisp) - (teletype structure editor.)
+- 1967 - BBN (InterLisp) - (teletype structure editor)
 - 1966 - [PILOT] - first thesis on structure editing
 
 ## Interlisp
@@ -232,6 +233,65 @@ from descriptions:
 
 _See the 1984 [LISP/VM User's Guide] and [Experience with an Uncommon Lisp]._
 
+## Nokolisp
+
+In 1979, [Nokolisp]'s editor was added as the author's reaction to the first
+Interlisp teletype editor, to see what it might look like as a screen-based
+editor.
+
+Rather than conventional pretty-printing seen in later screen-based editors,
+Nokolisp's editor displayed a subexpression on each line, allowing you to
+move a cursor line-by-line to select one to operate on. For example:
+
+```
+0> fib
+
+(lambda
+ (x)
+ (if
+  (< x 2)
+  x
+  (+ (fib (1- x)) (fib (- x 2)))))
+
+1> (edit fib)
+```
+
+This would bring up the following view:
+
+```
+(                                 BOOT fib 0 0
+_ lambda
+  (x)
+  (if (< x 2) x &)
+)
+```
+
+(Notice `&` elides the long expression for fitting.)
+
+The `_` cursor is initially on the first line. If we move `_` down to the third
+line, we can select and focus it to see our next view:
+
+```
+(                                 BOOT fib 1 0
+_ if
+  (< x 2)
+  x
+  (+ (fib (1- x)) (fib (- x 2)))
+)
+```
+
+I believe the `BOOt fib 1 0` is a status line indicating your position in the
+root expression.
+
+Paren commands are letters (need to verify):
+
+| Paren Command | Description                     |
+|:--------------|:--------------------------------|
+| `a`           | wrap in parens                  |
+| `r`           | remove parens                   |
+| `w`           | extend paren to next expression |
+| `c`           | push last element out of paren  |
+
 ## Maclisp
 
 (preferred formatted ASCII files over data structures for programs)
@@ -311,3 +371,4 @@ General:
 
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
+[Nokolisp]:https://timonoko.github.io/Nokolisp.htm

@@ -146,20 +146,34 @@ page 407._
 
 __[Try it here!](running.md#interlisp-sedit)__
 
-from the 1987 Xerox Lisp [Medley Release Notes]:
-
-> SEdit is the new Xerox Lisp structure editor. It allows you to edit
-> Xerox Lisp code directly in memory.  This editor replaces DEdit in
-> Chapter 16, Structure Editor, of the Interlisp-D Reference Manual.
-> First introduced in Lyric, the SEdit structure editor has been greatly
-> enhanced in the Medley release.
+SEdit later replaced DEdit as the default visual structure editor for Interlisp.
+It allowed the user to type directly into the pretty-printed view, and did away
+with the separate type-in window from DEdit. It may look closer to a normal text
+editor we're used to, but...
 
 [![sedit-screen]][sedit-video]
 
-See [SEdit Caret and Selection details] to learn how to edit. Parentheses
-behavior below:
+Though it appears to be a normal modern text editor, it still has the
+constraints of an auto-formatted structure editor. To give the user the most
+freedom within these constraints, a very interesting language was crafted around
+the mouse, allowing it to interact with the structure in a way I can only
+describe as _vim-like_.  See my take on documenting its unique [caret states and
+selection types].
 
-[SEdit Caret and Selection details]:sedit-caret-selection.md
+[caret states and selection types]:sedit-caret-selection.md
+
+After seeing this novel mouse behavior, I can see why most paren commands from
+DEdit and teletype editor were removed in SEdit. The mouse primitives work well
+with just the simplest paren commands (wrap/unwrap), exposed as hotkeys:
+
+| Hotkey   | Name         | Description                                     |
+|:---------|:-------------|:------------------------------------------------|
+| Meta-`(` | Parenthesize | wraps selection in a list. places `▲` after `(` |
+| Meta-`)` | Parenthesize | wraps selection in a list. places `▲` after `)` |
+| Meta-`/` | Extract      | unwraps selected list, string, or quote         |
+
+Normal insertions, deletions, and clicking of parens have the following
+behavior:
 
 | Paren Operation  | Description                                                     |
 |:-----------------|:----------------------------------------------------------------|
@@ -169,15 +183,11 @@ behavior below:
 | Backspace at `)` | nothing deleted. places `▲` before `)`                          |
 | Middle-click `(` | selects list. places `▲` on clicked side of `(`                 |
 | Middle-click `)` | selects list. places `▲` on clicked side of `)`                 |
-| Meta-`(`         | wraps selection in a list. places `▲` after `(`                 |
-| Meta-`)`         | wraps selection in a list. places `▲` after `)`                 |
-| Meta-`/`         | unwraps selected list, string, or quote                         |
 
-_See Appendix B of [Lyric Release Notes] or [Medley Release Notes]_
+_See the 1987 [Lyric Release Notes] or [Medley Release Notes] in Appendix B, and mailing lists musings [1], [2]_
 
-musings on SEdit
-  - http://legacy.python.org/search/hypermail/python-1994q3/0136.html
-  - http://legacy.python.org/search/hypermail/python-1994q3/0138.html
+[1]:http://legacy.python.org/search/hypermail/python-1994q3/0136.html
+[2]:http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 
 ## ZMacs
 

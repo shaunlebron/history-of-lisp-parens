@@ -247,6 +247,8 @@ _See the 1984 [LISP/VM User's Guide] and [Experience with an Uncommon Lisp]._
 
 ## Nokolisp
 
+__[Try it here!](running.md#nokolisp)__
+
 In 1979, [Nokolisp]'s editor was added as the author's reaction to the first
 Interlisp teletype editor, to see what it might look like as a screen-based
 editor.
@@ -393,3 +395,5 @@ General:
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
 [Nokolisp]:https://timonoko.github.io/Nokolisp.htm
+[noko.exe]:http://timonoko.github.io/noko.exe
+[DOSBox]:https://www.dosbox.com/

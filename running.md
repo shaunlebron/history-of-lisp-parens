@@ -94,7 +94,30 @@ __Once inside InterLisp, run SEdit:__
 1. Type `(ED 'FOO)` > click "Functions" > click "Defun"
 1. You are now in an SEdit window.
 
+## Nokolisp
+
+1. Download [noko.exe] and place it in some empty directory (e.g. `~/nokolisp` used below)
+1. Open [DOSBox].
+
+```
+Z:\>mount c: ~/nokolisp
+
+Z:\>c:
+
+C:\>noko
+```
+
+You can display and edit the packaged `fib` function to try it out:
+
+```
+0> fib
+
+1> (edit fib)
+```
+
 [Medley Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198809_Medley_1.0/400006_Lisp_Release_Notes_Medley_Release_1.0_Sep88.pdf
 [these instructions]:https://gist.github.com/grav/7fe0f054f5ad04da2bb0eef2414a663b
 [LFG]:http://www2.parc.com/isl/groups/nltt/medley/
 [prepackaged debian image]:https://github.com/shaunlebron/history-of-lisp-editing/releases/download/0.0/Debian.3.1r0a.x86.netinstall.vdi.zip
+[noko.exe]:http://timonoko.github.io/noko.exe
+[DOSBox]:https://www.dosbox.com/

@@ -271,11 +271,16 @@ move a cursor line-by-line to select one to operate on. For example:
 This would bring up the following view:
 
 ```
-(                                 BOOT fib 0 0
-_ lambda
-  (x)
-  (if (< x 2) x &)
-)
+┌──────────────────────────────────────────────┐
+│                                 BOOT fib 0 0 │
+│ (                                            │
+│ _ lambda                                     │
+│   (x)                                        │
+│   (if (< x 2) x &)                           │
+│ )                                            │
+│                                              │
+│                                              │
+└──────────────────────────────────────────────┘
 ```
 
 (Notice `&` elides the long expression for fitting.)
@@ -284,12 +289,16 @@ The `_` cursor is initially on the first line. If we move `_` down to the third
 line, we can select and focus it to see our next view:
 
 ```
-(                                 BOOT fib 1 0
-_ if
-  (< x 2)
-  x
-  (+ (fib (1- x)) (fib (- x 2)))
-)
+┌──────────────────────────────────────────────┐
+│                                 BOOT fib 1 0 │
+│ (                                            │
+│ _ if                                         │
+│   (< x 2)                                    │
+│   x                                          │
+│   (+ (fib (1- x)) (fib (- x 2)))             │
+│ )                                            │
+│                                              │
+└──────────────────────────────────────────────┘
 ```
 
 I believe the `BOOt fib 1 0` is a status line indicating your position in the

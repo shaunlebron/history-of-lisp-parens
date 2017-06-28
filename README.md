@@ -1,3 +1,5 @@
+> __NOTE__: this is research in progress (references appreciated!)
+
 # History of Lisp Editing
 
 I'd like to find out how people tolerated parens back in the golden days of

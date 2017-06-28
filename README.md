@@ -24,9 +24,6 @@ I started by working backwards from today (still filling in blanks):
 - 196? - Standard Lisp fedit (structure editor)*
 - 1966 - [PILOT] - first thesis on structure editing
 
-* I'm pretty certain Standard Lisp had a structure editor before Portable Standard
-Lisp, because PSL was essentially just Standard Lisp with a Lisp-to-C compiler.
-However I don't know when or by whom it was written.
 
 ## Interlisp
 
@@ -34,6 +31,18 @@ However I don't know when or by whom it was written.
 > editor, which operated on source code in the form of memory-resident Lisp data
 > structures.<br>—[Evolution of Lisp]
 
+
+## Standard Lisp/Portable Standard Lisp
+
+Portable Standard Lisp, as used at Cambridge University in England and later
+commercialised by Acornsoft, had a structure editor, entered as **sedit** for
+editing arbitrary s-expressions or as **fedit** for editing functions. Whether
+this feature existed in Portable Standard Lisp as used at Utah and other sites
+is not known, but is probable, since it is understood that the Cambridge version
+was a straight port. Similarly, it is not known whether this feature existed
+in Standard Lisp prior to the 1980 release of Portable Standard Lisp, but again
+it is probable, since the new feature in Portable Standard Lisp was the
+Lisp-to-C compiler.
 
 ### Teletype Editor
 

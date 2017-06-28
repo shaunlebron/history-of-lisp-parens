@@ -270,7 +270,7 @@ move a cursor line-by-line to select one to operate on. For example:
 1> (edit fib)
 ```
 
-This would bring up the following view:
+This would bring up the following editor view:
 
 ```
 ┌──────────────────────────────────────────────┐
@@ -312,9 +312,13 @@ line, we can select and focus it to see our next view:
 | `w`           | join with next line, then wrap |
 | `c`           | extend parens to next line     |
 
-| Command | Description         |
-|:--------|:--------------------|
-| `p`     | toggle pretty-print |
+| Command | Description                              |
+|:--------|:-----------------------------------------|
+| `p`     | toggle pretty-print                      |
+| `4`     | navigate up to parent list (exit if top) |
+| `6`     | edit atom or navigate into list          |
+
+See all the [nokolisp commands](nokolisp-commands.md).
 
 ## Maclisp
 

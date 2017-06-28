@@ -1,17 +1,5 @@
 ## Nokolisp Commands
 
-| Paren Command | Description                    |
-|:--------------|:-------------------------------|
-| `a`           | wrap                           |
-| `r`           | unwrap                         |
-| `w`           | join with next line, then wrap |
-| `c`           | extend parens to next line     |
-
-| Display Command | Description         |
-|:----------------|:--------------------|
-| `p`             | toggle pretty-print |
-| `f`             | refresh             |
-
 | Navigation Command | Description                               |
 |:-------------------|:------------------------------------------|
 | `↕`                | move cursor to select an expression       |
@@ -27,3 +15,15 @@
 | `b`            | double this                          |
 | `v`            | swap this and next                   |
 | `q`            | wrap line in `(quote ...)`           |
+
+| Paren Command | Description                    |
+|:--------------|:-------------------------------|
+| `a`           | wrap                           |
+| `r`           | unwrap                         |
+| `w`           | join with next line, then wrap |
+| `c`           | extend parens to next line     |
+
+| Display Command | Description         |
+|:----------------|:--------------------|
+| `p`             | toggle pretty-print |
+| `f`             | refresh             |

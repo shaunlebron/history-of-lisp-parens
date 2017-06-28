@@ -305,18 +305,19 @@ line, we can select and focus it to see our next view:
 
 `BOOT fib 1 0` is a status line indicating `filename - function - level - ?`.
 
+| Command | Description                               |
+|:--------|:------------------------------------------|
+| `↕`     | move cursor to select an expression       |
+| `6`     | navigate into list (edit inline if atom)  |
+| `4`     | navigate out to parent list (exit if top) |
+| `p`     | toggle pretty-print                       |
+
 | Paren Command | Description                    |
 |:--------------|:-------------------------------|
 | `a`           | wrap                           |
 | `r`           | unwrap                         |
 | `w`           | join with next line, then wrap |
 | `c`           | extend parens to next line     |
-
-| Command | Description                              |
-|:--------|:-----------------------------------------|
-| `p`     | toggle pretty-print                      |
-| `4`     | navigate up to parent list (exit if top) |
-| `6`     | edit atom or navigate into list          |
 
 See all the [nokolisp commands](nokolisp-commands.md).
 

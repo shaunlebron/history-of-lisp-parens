@@ -109,8 +109,7 @@ The editor maintains a list of all the functions that have been edited in the cu
 #### 2.2.5 limitations
 
 The editor cannot deal with reentrant LISP s-expressions. Currently it cannot express vectors or strings adequately for easy editing of their internal constituents.
-I
-1
+
 
 
 

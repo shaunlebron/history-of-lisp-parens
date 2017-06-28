@@ -14,12 +14,19 @@ I started by working backwards from today (still filling in blanks):
 - ...
 - 1987 - Interlisp SEdit (structure editor. full interactive display)
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
+- 1983 - BBC LISP FEDIT (structure editor, based closely on PSL fedit)
 - 1980 - IBM Lisp/VM Lispedit (display editor)
 - 1980 - Zmacs - first structure commands for text editor
+- 1980 - Portable Standard Lisp fedit/sedit (structure editor)
 - 1979 - Nokolisp - screen-based editor
 - ...
 - 1967 - BBN (InterLisp) - (teletype structure editor)
+- 196? - Standard Lisp fedit (structure editor)*
 - 1966 - [PILOT] - first thesis on structure editing
+
+* I'm pretty certain Standard Lisp had a structure editor before Portable Standard
+Lisp, because PSL was essentially just Standard Lisp with a Lisp-to-C compiler.
+However I don't know when or by whom it was written.
 
 ## Interlisp
 

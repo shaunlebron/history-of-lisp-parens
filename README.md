@@ -303,10 +303,7 @@ line, we can select and focus it to see our next view:
 └──────────────────────────────────────────────┘
 ```
 
-I believe the `BOOt fib 1 0` is a status line indicating your position in the
-root expression.
-
-Paren commands are letters (need to verify):
+`BOOT fib 1 0` is a status line indicating `filename - function - level - ?`.
 
 | Paren Command | Description                    |
 |:--------------|:-------------------------------|
@@ -314,6 +311,10 @@ Paren commands are letters (need to verify):
 | `r`           | unwrap                         |
 | `w`           | join with next line, then wrap |
 | `c`           | extend parens to next line     |
+
+| Command | Description         |
+|:--------|:--------------------|
+| `p`     | toggle pretty-print |
 
 ## Maclisp
 
@@ -395,5 +396,3 @@ General:
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
 [Nokolisp]:https://timonoko.github.io/Nokolisp.htm
-[noko.exe]:http://timonoko.github.io/noko.exe
-[DOSBox]:https://www.dosbox.com/

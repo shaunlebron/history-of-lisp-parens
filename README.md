@@ -306,12 +306,12 @@ root expression.
 
 Paren commands are letters (need to verify):
 
-| Paren Command | Description                     |
-|:--------------|:--------------------------------|
-| `a`           | wrap in parens                  |
-| `r`           | remove parens                   |
-| `w`           | extend paren to next expression |
-| `c`           | push last element out of paren  |
+| Paren Command | Description                    |
+|:--------------|:-------------------------------|
+| `a`           | wrap                           |
+| `r`           | unwrap                         |
+| `w`           | join with next line, then wrap |
+| `c`           | extend parens to next line     |
 
 ## Maclisp
 

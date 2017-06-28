@@ -65,7 +65,7 @@ The next four commands perform more complicated location changing, the first two
 The following commands perform structure modifying operations:
 
 * d - Delete the current s-expression.
-* r - Replace current s-expression with a user-specified s-expression read from the bottom of the screen. See also section 2.2.4 below headed `hash variables'.
+* r - Replace current s-expression with a user-specified s-expression read from the bottom of the screen. See also section 2.2.4 below headed 'hash variables'.
 * c - Repeat the last structure modification.
 * i - Insert a user-specified s-expression at the edit pointer, performing a cons of the user's expression with the current s-expression.
 * s - Splice in a user-specified list at the edit pointer. If the current s-expression is an atom, it is replaced by the elements in the new list.
@@ -109,9 +109,3 @@ The editor maintains a list of all the functions that have been edited in the cu
 #### 2.2.5 limitations
 
 The editor cannot deal with reentrant LISP s-expressions. Currently it cannot express vectors or strings adequately for easy editing of their internal constituents.
-
-
-
-
-
-

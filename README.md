@@ -283,9 +283,9 @@ In 1979, [Nokolisp]'s editor was added as the author's reaction to the first
 Interlisp teletype editor, to see what it might look like as a screen-based
 editor.
 
-Rather than conventional pretty-printing seen in later screen-based editors,
-Nokolisp's editor displayed a subexpression on each line, allowing you to
-move a cursor up and down to select one to operate on.
+Nokolisp's editor displayed a subexpression on each line, allowing you to move a
+cursor up and down to select one to operate on. Conventional pretty-print could
+be toggled with `p`.
 
 For example, there is a builtin function `fib`:
 

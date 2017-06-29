@@ -187,10 +187,40 @@ _See the 1987 [Lyric Release Notes] or [Medley Release Notes] in Appendix B, and
 
 ## ZMacs
 
-ZMacs in 1980 is [reported](https://news.ycombinator.com/item?id=10548242) to be
-the first text editor with balanced parentheses commands. The 1987 [ZMacs
-Editor Reference] shows them on page 209 (3-137):
+__[Try it here?](https://github.com/shaunlebron/history-of-lisp-editing/issues/6)__
 
+ZMacs in 1980 is [reported](https://news.ycombinator.com/item?id=10548242) to be
+the first text-based editor with auto-balancing paren operations.
+
+[![zmacs-screen]][zmacs-video]
+
+When a cursor touched the outside of a list, the corresponding paren would
+blink. This is a staple feature among all text editors today.
+
+The primary paren commands are suggested to be those associated with the
+simplest hotkeys:
+
+| Hotkey   | Description           | with number arg _n_  |
+|:---------|:----------------------|:---------------------|
+| `CTRL-(` | find unbalanced paren |                      |
+| `META-(` | wrap `()` forward     | size _n_ (default 0) |
+| `META-)` | move over next `)`    |                      |
+
+The others are run with `META-X` and by typing the full command (with the help
+of auto-completion):
+
+| Command                       | Description                              | with number arg _n_         |
+|:------------------------------|:-----------------------------------------|:----------------------------|
+| `META-X` "Close Definition"   | inserts enough `)))))` to end definition |                             |
+| `META-X` "Delete ()"          | delete `(` and matching `)`              | _n_ th innermost `()`       |
+| `META-X` "Grow List Backward" | move `(` backward over an expression     | _n_ jumps (can be negative) |
+| `META-X` "Grow List Forward"  | move `)` forward over an expression      | _n_ jumps (can be negative) |
+| `META-X` "Make () Backward"   | wrap `()` backward                       | size _n_ (default 1)        |
+
+To pass a number arg to a hotkey, do `CTRL-1`, `CTRL-0`, `META-(` for example to
+wrap the next 10 elements in a list.
+
+_See the 1987 [ZMacs Editor Reference] on page 209 (3-137)_
 
 ## Lispedit
 
@@ -378,7 +408,6 @@ General:
 [DrRacket]:https://docs.racket-lang.org/drracket/editor.html
 [Taylor Campbell]:http://mumble.net/~campbell/
 [PILOT]:https://dspace.mit.edu/bitstream/handle/1721.1/6905/AITR-221.pdf
-
 [LispEdit]:https://github.com/blakemcbride/LispEdit/blob/master/EDIT.txt
 [deepdyve]:https://www.deepdyve.com
 [Evolution of Lisp]:https://www.csee.umbc.edu//courses/331/resources/papers/Evolution-of-Lisp.pdf
@@ -386,20 +415,18 @@ General:
 [Interlisp Reference Manual]:http://www.softwarepreservation.org/projects/LISP/interlisp-d/3100186-Interlisp_Oct83.pdf
 [History of Interlisp discussion]:https://groups.google.com/forum/#!topic/comp.sys.xerox/FKG8f1cnWvI
 [Interlisp-D Reference Manual Volume II: Environment]:http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/xerox/interlisp-d/198510_Koto/3101273_Interlisp-D_Vol_2_Environment_Oct85.pdf
-
 [dedit-screen]:https://user-images.githubusercontent.com/116838/27507672-6a6416ae-5899-11e7-9475-5704bb8933c4.png
 [sedit-screen]:https://user-images.githubusercontent.com/116838/27450864-b4ffcf20-5752-11e7-90e4-1668709d0189.png
 [sedit-video]:https://www.youtube.com/watch?v=2qsmF8HHskg
 [Lyric Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198706_Lyric/198706_3102434_Lyric_Release_Notes.pdf
 [Medley Release Notes]:http://bitsavers.trailing-edge.com/pdf/xerox/interlisp-d/198809_Medley_1.0/400006_Lisp_Release_Notes_Medley_Release_1.0_Sep88.pdf
-
 [An Introduction to to Medley]:https://archive.org/details/bitsavers_xeroxinter0AnIntroductiontoMedleyRelease2.0Feb92_9578080
 [Medley]:http://top2bottom.net/medley.html
-
 [LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
 [ZMacs Editor Reference]:http://bitsavers.trailing-edge.com/pdf/ti/explorer/2243192-0001A_Zmacs_Jun87.pdf
-
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
 [Nokolisp]:https://timonoko.github.io/Nokolisp.htm
 [Paxedit]:https://github.com/promethial/paxedit
+[zmacs-screen]:https://user-images.githubusercontent.com/116838/27673082-6e1b0112-5c64-11e7-80b7-1bc609499363.png
+[zmacs-video]:https://youtu.be/o4-YnLpLgtk?t=48s

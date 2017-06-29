@@ -24,12 +24,11 @@ I started by working backwards from today (still filling in blanks):
 - 1967 - BBN (InterLisp) - (teletype structure editor)
 - 1966 - [PILOT] - first thesis on structure editing
 
-## Interlisp
+## Goal
 
-> In Interlisp, the programmer worked with source code presented by a structure
-> editor, which operated on source code in the form of memory-resident Lisp data
-> structures.<br>—[Evolution of Lisp]
-
+Rather than create an exhaustive account of all the editors from this time, I'd
+like to highlight the ones that made substantial UX improvements around
+parens—particularly those I found most interesting.
 
 ## Interlisp Teletype Editor
 

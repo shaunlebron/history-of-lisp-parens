@@ -11,6 +11,7 @@ I started by working backwards from today (still filling in blanks):
 - 2015 - [Parinfer]
 - 2014 - [Paxedit]
 - 2014 - [Lispy]
+- 2013 - [vim-sexp] with [better keys][tpope-sexp]
 - 2012 - [Smartparens]
 - 2005 - [Paredit] by [Taylor Campbell]
 - 2001 - [DrScheme], now [DrRacket]
@@ -413,3 +414,5 @@ General:
 [Paxedit]:https://github.com/promethial/paxedit
 [zmacs-screen]:https://user-images.githubusercontent.com/116838/27673082-6e1b0112-5c64-11e7-80b7-1bc609499363.png
 [zmacs-video]:https://youtu.be/o4-YnLpLgtk?t=48s
+[vim-sexp]:https://github.com/guns/vim-sexp
+[tpope-sexp]:https://github.com/tpope/vim-sexp-mappings-for-regular-people

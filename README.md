@@ -31,7 +31,7 @@ I started by working backwards from today (still filling in blanks):
 > structures.<br>—[Evolution of Lisp]
 
 
-### Teletype Editor
+## Interlisp Teletype Editor
 
 __[Try it here!](running.md#interlisp-teletype)__
 
@@ -107,7 +107,7 @@ Six paren commands can be performed on the current expression's children:
 _See the 1967 [BBN Lisp System] section on "structure changing commands" page 49._
 
 
-### DEdit
+## Interlisp DEdit
 
 The display editor was a visual alternative to the teletype editor—click one or
 two expressions in the pretty-print, then click a command to execute on those
@@ -138,7 +138,7 @@ _unreads_ it into the type-in window (pastes as text).
 _See the 1985 [Interlisp-D Reference Manual Volume II: Environment], Chapter 16
 page 407._
 
-### SEdit
+## Interlisp SEdit
 
 __[Try it here!](running.md#interlisp-sedit)__
 

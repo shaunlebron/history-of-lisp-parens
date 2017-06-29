@@ -286,53 +286,37 @@ editor.
 
 Rather than conventional pretty-printing seen in later screen-based editors,
 Nokolisp's editor displayed a subexpression on each line, allowing you to
-move a cursor line-by-line to select one to operate on. For example:
+move a cursor up and down to select one to operate on.
+
+For example, there is a builtin function `fib`:
 
 ```
-0> fib
-
 (lambda
  (x)
  (if
   (< x 2)
   x
   (+ (fib (1- x)) (fib (- x 2)))))
-
-1> (edit fib)
 ```
 
-This would bring up the following editor view:
+Running `(edit fib)` will start the editor, with each top-level subexpression
+on each line.  Moving the cursor to the third line and pressing `6` will
+navigate into the expression as shown:
 
 ```
-┌──────────────────────────────────────────────┐
-│                                 BOOT fib 0 0 │
-│ (                                            │
-│ _ lambda                                     │
-│   (x)                                        │
-│   (if (< x 2) x &)                           │
-│ )                                            │
-│                                              │
-│                                              │
-└──────────────────────────────────────────────┘
+┌──────────────────────────────────────────┐            ┌──────────────────────────────────────────┐
+│                             BOOT fib 0 0 │            │                             BOOT fib 1 0 │
+│ (                                        │            │ (                                        │
+│   lambda                                 │      ┌───> │ _ if                                     │
+│   (x)                                    │      │     │   (< x 2)                                │
+│ _ (if (< x 2) x &)                       │ ─────┘     │   x                                      │
+│ )                                        │ go into    │   (+ (fib (1- x)) (fib (- x 2)))         │
+│                                          │ expression │ )                                        │
+│                                          │            │                                          │
+└──────────────────────────────────────────┘            └──────────────────────────────────────────┘
 ```
 
-(Notice `&` elides the long expression for fitting.)
-
-The `_` cursor is initially on the first line. If we move `_` down to the third
-line, we can select and focus it to see our next view:
-
-```
-┌──────────────────────────────────────────────┐
-│                                 BOOT fib 1 0 │
-│ (                                            │
-│ _ if                                         │
-│   (< x 2)                                    │
-│   x                                          │
-│   (+ (fib (1- x)) (fib (- x 2)))             │
-│ )                                            │
-│                                              │
-└──────────────────────────────────────────────┘
-```
+(Notice `&` elides the long expression at first for fitting.)
 
 `BOOT fib 1 0` is a status line indicating `filename - function - level - ?`.
 

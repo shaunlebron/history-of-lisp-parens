@@ -17,7 +17,7 @@ I started by working backwards from today (still filling in blanks):
 - ...
 - 1987 - Interlisp SEdit (structure editor. full interactive display)
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
-- 1980 - IBM Lisp/VM Lispedit (display editor)
+- 1980 - Lispedit (display editor)
 - 1980 - Zmacs - first structure commands for text editor
 - 1979 - Nokolisp - screen-based editor
 - ...
@@ -185,11 +185,11 @@ _See the 1987 [Lyric Release Notes] or [Medley Release Notes] in Appendix B, and
 [1]:http://legacy.python.org/search/hypermail/python-1994q3/0136.html
 [2]:http://legacy.python.org/search/hypermail/python-1994q3/0138.html
 
-## ZMacs
+## Zmacs
 
 __[Try it here?](https://github.com/shaunlebron/history-of-lisp-editing/issues/6)__
 
-ZMacs in 1980 is [reported](https://news.ycombinator.com/item?id=10548242) to be
+Zmacs in 1980 is [reported](https://news.ycombinator.com/item?id=10548242) to be
 the first text-based editor with auto-balancing paren operations.
 
 [![zmacs-screen]][zmacs-video]
@@ -220,7 +220,7 @@ of auto-completion):
 To pass a number arg to a hotkey, do `CTRL-1`, `CTRL-0`, `META-(` for example to
 wrap the next 10 elements in a list.
 
-_See the 1987 [ZMacs Editor Reference] on page 209 (3-137)_
+_See the 1987 [Zmacs Editor Reference] on page 209 (3-137)_
 
 ## Lispedit
 
@@ -423,7 +423,7 @@ General:
 [An Introduction to to Medley]:https://archive.org/details/bitsavers_xeroxinter0AnIntroductiontoMedleyRelease2.0Feb92_9578080
 [Medley]:http://top2bottom.net/medley.html
 [LISP/VM User's Guide]:http://www.softwarepreservation.org/projects/LISP/ibm/SH20-6477_LispVMUG_Jul84.pdf
-[ZMacs Editor Reference]:http://bitsavers.trailing-edge.com/pdf/ti/explorer/2243192-0001A_Zmacs_Jun87.pdf
+[Zmacs Editor Reference]:http://bitsavers.trailing-edge.com/pdf/ti/explorer/2243192-0001A_Zmacs_Jun87.pdf
 [Experience with an Uncommon Lisp]:https://pdfs.semanticscholar.org/d15c/2d1a8d4b0086af487372504f50cbe9dbcae7.pdf
 [Interactive program execution in Lispedit]:https://www.deepdyve.com/lp/association-for-computing-machinery/interactive-program-execution-in-lispedit-oIXwkiLVjG
 [Nokolisp]:https://timonoko.github.io/Nokolisp.htm

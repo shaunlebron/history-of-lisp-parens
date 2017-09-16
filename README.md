@@ -9,8 +9,10 @@ I'd like to find out how people tolerated parens back in the golden days of
 Lisp. I have a feeling we might've forgotten some things that would be useful
 today, or might influence some new ideas.
 
-Roughly, we cover the history in three parts:
 
+Roughly, we cover the history in four parts:
+
+1. [Why Parens?](why-parens.md)
 1. [Editors](editors.md)
-2. [Alternative Syntaxes](alt-syntax.md)
-3. [Visual Decorations](decorations.md)
+1. [Alternative Syntaxes](alt-syntax.md)
+1. [Visual Decorations](decorations.md)

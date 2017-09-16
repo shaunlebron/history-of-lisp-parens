@@ -12,6 +12,7 @@ Starting backwards from today:
 - 2005 - [Paredit] by [Taylor Campbell]
 - 2001 - [DrScheme], now [DrRacket]
 - ...
+- 1991 - [List Window], not an editor, but a fisheye pretty-print
 - 1987 - Interlisp SEdit (structure editor. full interactive display)
 - 198? - Interlisp DEdit (display editor. clickable display + command window)
 - 1980 - Lispedit (display editor)
@@ -406,3 +407,5 @@ General:
 [zmacs-video]:https://youtu.be/o4-YnLpLgtk?t=48s
 [vim-sexp]:https://github.com/guns/vim-sexp
 [tpope-sexp]:https://github.com/tpope/vim-sexp-mappings-for-regular-people
+
+[List Window]:https://www.deepdyve.com/lp/association-for-computing-machinery/a-browsing-interface-for-s-expressions-mlQtlCO8Px

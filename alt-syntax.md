@@ -81,6 +81,7 @@ _See [The Portable Standard LISP Users Manual], Chapter 3_
 - [Top Down Operator Precedence (2007)](http://javascript.crockford.com/tdop/tdop.html)
 - [The Evolution of Lisp (1993)](https://www.dreamsongs.com/Files/HOPL2-Uncut.pdf)
 - [LISP Infix Syntax Survey (2013)](http://xahlee.info/comp/lisp_sans_sexp.html)
+- [lispin.org similar links](http://web.archive.org/web/20070827030525/http://www.lispin.org:80/wiki?page=default/links)
 
 ## Appendix
 

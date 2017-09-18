@@ -17,6 +17,7 @@ First structure editor:
 Alternative syntaxes:
 
 - [Readable s-expressions and sweet-expressions: Getting the infix fix and fewer parentheses in Lisp-like languages](wheeler2006.pdf)
+  - [Sweet-expressions: Version 0.2 (draft)](wheeler2007.pdf)
 
 Manuals:
 

@@ -12,6 +12,7 @@ Lisp uses s-expressions.  There is a long history of others that have been tried
 - 1973 - [CLISP], Conversational LISP (s-expressions + infix/algol)
 - 1977 - [CGOL], algol syntax for MACLISP
 - 1992 - [Dylan], lisp derivative with algol syntax
+- 1997 - [Pico], an educational Scheme with easier syntax
 
 Contemporary:
 
@@ -122,3 +123,4 @@ and `(...)` for grouping.
 [I-expressions]:https://srfi.schemers.org/srfi-49/srfi-49.html
 [Honu]:http://sci-hub.cc/10.1145/2371401.2371420
 [Genyris]:http://lambda-the-ultimate.org/node/2651
+[Pico]:https://en.wikipedia.org/wiki/Pico_(programming_language)

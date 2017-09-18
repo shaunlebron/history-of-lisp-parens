@@ -18,6 +18,7 @@ Contemporary:
 
 - 2003 - [I-expressions], indentation-based
 - 2006 - [PLOT], macro-compatible algol-like
+- 2006 - [TwinLisp], C-like syntax for Common Lisp
 - 2006 - [Readable], proposing three superset (c,n,t)-expressions
 - 2008 - [Genyris], indentation-based
 - 2009 - [Ginger], proposing g-expressions for "python aesthetics"
@@ -124,3 +125,4 @@ and `(...)` for grouping.
 [Honu]:http://sci-hub.cc/10.1145/2371401.2371420
 [Genyris]:http://lambda-the-ultimate.org/node/2651
 [Pico]:https://en.wikipedia.org/wiki/Pico_(programming_language)
+[TwinLisp]:http://twinlisp.nongnu.org/docs/TwinLisp%20for%20lisp%20users.html

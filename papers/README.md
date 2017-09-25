@@ -20,10 +20,11 @@ Alternative syntaxes:
 - [Readable s-expressions and sweet-expressions: Getting the infix fix and fewer parentheses in Lisp-like languages (2006)](wheeler2006.pdf)
   - [Sweet-expressions: Version 0.2 (2007)](wheeler2007.pdf)
 - [Pico: Scheme for mere mortals](LispWS.pdf)
+- [SKILL: a Lisp Based Extension Language](petrus1993.pdf)
 
 Manuals:
 
-- ...
+- [THE BBN 940 LISP SYSTEM (1967)](656771.pdf)
 
 Misc:
 

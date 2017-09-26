@@ -12,7 +12,7 @@ High-level history:
 First structure editor:
 
 - [PILOT: A Step Toward Man-Computer Symbiosis (1966)](AITR-221.pdf)
-- [Preliminary Guide to the Lisp Editor (1967)](W-21_LISP_Editor_Apr27.pdf)
+- [Preliminary Guide to the Lisp Editor (1967)](W-21_LISP_Editor_Apr67.pdf)
 
 Alternative syntaxes:
 

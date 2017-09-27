@@ -25,6 +25,7 @@ Alternative syntaxes:
 Manuals:
 
 - [THE BBN 940 LISP SYSTEM (1967)](656771.pdf)
+- [LISP/VM User's Guide](SH20-6477_LispVMUG_Jul84.pdf)
 
 Misc:
 

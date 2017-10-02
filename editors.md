@@ -127,7 +127,7 @@ _unreads_ it into the type-in window (pastes as text).
 | `) out`             | middle-click `() out` to show | same as `RO`     |
 
 _See the 1985 [Interlisp-D Reference Manual Volume II: Environment], Chapter 16
-page 407._
+page 107._
 
 ## Interlisp SEdit
 

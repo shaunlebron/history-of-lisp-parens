@@ -113,7 +113,7 @@ and `(...)` for grouping.
 
 [Logo]:http://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html
 [Wisp]:https://srfi.schemers.org/srfi-119/srfi-119.html
-[Ginger]:http://sci-hub.cc/10.1145/1566445.1566481
+[Ginger]:http://ginger.readthedocs.io
 [Nonelang]:https://bitbucket.org/duangle/nonelang/overview
 [naked expressions]:http://nonelang.readthedocs.io/en/latest/dataformat.html#naked-coated-expressions
 [Lisp Flavored Erlang]:https://en.wikipedia.org/wiki/LFE_(programming_language)

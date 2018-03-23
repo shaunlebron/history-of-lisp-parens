@@ -113,7 +113,7 @@ and `(...)` for grouping.
 
 [Logo]:http://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html
 [Wisp]:https://srfi.schemers.org/srfi-119/srfi-119.html
-[Ginger]:http://sci-hub.cc/10.1145/1566445.1566481
+[Ginger]:http://sci-hub.tw/10.1145/1566445.1566481
 [Nonelang]:https://bitbucket.org/duangle/nonelang/overview
 [naked expressions]:http://nonelang.readthedocs.io/en/latest/dataformat.html#naked-coated-expressions
 [Lisp Flavored Erlang]:https://en.wikipedia.org/wiki/LFE_(programming_language)
@@ -121,7 +121,7 @@ and `(...)` for grouping.
 [Interlisp]:http://www.dtic.mil/dtic/tr/fulltext/u2/656771.pdf
 [PLOT]:http://users.rcn.com/david-moon/PLOT/
 [I-expressions]:https://srfi.schemers.org/srfi-49/srfi-49.html
-[Honu]:http://sci-hub.cc/10.1145/2371401.2371420
+[Honu]:http://sci-hub.tw/10.1145/2371401.2371420
 [Genyris]:http://lambda-the-ultimate.org/node/2651
 [Pico]:https://en.wikipedia.org/wiki/Pico_(programming_language)
 [TwinLisp]:http://twinlisp.nongnu.org/docs/TwinLisp%20for%20lisp%20users.html

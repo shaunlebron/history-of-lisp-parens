@@ -20,6 +20,7 @@ Lisp uses s-expressions. There is a long history of others that have been tried.
 * 2006 - [Readable], proposing three superset (c,n,t)-expressions
 * 2008 - [Genyris], indentation-based
 * 2009 - [Ginger], proposing g-expressions for "python aesthetics" ([backup link][ginger-backup])
+* 2011 - [Sweet-Racket], port of sweet-expressions from "readable" into all [Racket] variants. 
 * 2012 - [Honu], similar to PLOT, macro-compatible ([backup link][honu-backup])
 * 2014 - [Wisp], a simplified version of "readable"
 * 2015 - [Nonelang], with [naked expressions]
@@ -86,6 +87,7 @@ _See [The Portable Standard LISP Users Manual], Chapter 3_
 
 * 2008 - [Lisp Flavored Erlang]
 * 2013 - [Hylang]
+* 2017 - [Hacket]
 
 ### Mathematica
 
@@ -122,3 +124,6 @@ and `(...)` for grouping.
 [pico]: https://en.wikipedia.org/wiki/Pico_(programming_language)
 [twinlisp]: http://twinlisp.nongnu.org/docs/TwinLisp%20for%20lisp%20users.html
 [iacl2]: http://www.cs.utexas.edu/users/moore/infix/printer/syntax.html
+[hacket]: https://github.com/lexi-lambda/hackett
+[racket]: https://racket-lang.org/
+[sweet-racket]: https://github.com/takikawa/sweet-racket

@@ -1,4 +1,4 @@
-> __NOTE__: research in progress (references appreciated!)
+> __NOTE__: references appreciated!
 
 # History of Lisp Parentheses
 

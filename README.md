@@ -16,3 +16,9 @@ Roughly, we cover the history in four parts:
 1. [Editors](editors.md)
 1. [Alternative Syntaxes](alt-syntax.md)
 1. [Visual Decorations](decorations.md)
+
+## Archived References
+
+See the following archive of historical papers and manuals referenced in the sections above:
+
+https://archive.org/details/history-of-lisp-parens

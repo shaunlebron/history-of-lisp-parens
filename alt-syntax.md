@@ -110,7 +110,7 @@ and `(...)` for grouping.
 [logo]: http://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html
 [wisp]: https://srfi.schemers.org/srfi-119/srfi-119.html
 [ginger]: http://sci-hub.tw/10.1145/1566445.1566481
-[ginger-backup]: papers/palmer2009.pdf
+[ginger-backup]: https://archive.org/details/history-of-lisp-parens/palmer2009.pdf
 [nonelang]: https://bitbucket.org/duangle/nonelang/overview
 [naked expressions]: http://nonelang.readthedocs.io/en/latest/dataformat.html#naked-coated-expressions
 [lisp flavored erlang]: https://en.wikipedia.org/wiki/LFE_(programming_language)
@@ -119,7 +119,7 @@ and `(...)` for grouping.
 [plot]: http://users.rcn.com/david-moon/PLOT/
 [i-expressions]: https://srfi.schemers.org/srfi-49/srfi-49.html
 [honu]: http://sci-hub.tw/10.1145/2371401.2371420
-[honu-backup]: papers/rafkind2012.pdf
+[honu-backup]: https://archive.org/details/history-of-lisp-parens/rafkind2012.pdf
 [genyris]: http://lambda-the-ultimate.org/node/2651
 [pico]: https://en.wikipedia.org/wiki/Pico_(programming_language)
 [twinlisp]: http://twinlisp.nongnu.org/docs/TwinLisp%20for%20lisp%20users.html
